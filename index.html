@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K9 Services | Sicurezza Cinofila Professionale dal 1999 — Cani Antiesplosivi, Patrol Dog, Maritime Security</title>
+<meta name="description" content="K9 Services: 25 anni di sicurezza cinofila specializzata. Cani antiesplosivi, antidroga, patrol dog, maritime security, close protection e ricerca persone. Operativi H24 in Italia e all'estero.">
+<meta name="keywords" content="sicurezza cinofila, cani antiesplosivi, cani antidroga, patrol dog, maritime security, close protection, ricerca persone scomparse, sicurezza cinofila italia">
+<meta property="og:title" content="K9 Services — Sicurezza Cinofila Professionale dal 1999">
+<meta property="og:description" content="25 anni di sicurezza cinofila. Zero compromessi. Operativi H24 in Italia e all'estero.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.k9services.it/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐕</text></svg>">
+
+<style>
+/* ═══════════════════════════════════════════
+   TOKENS & RESET
+═══════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:       #1a1f3a;
+  --navy-dark:  #10132a;
+  --navy-light: #232848;
+  --anthracite: #1e1e1e;
+  --surface:    #252535;
+  --gold:       #C9A84C;
+  --gold-dim:   #a88a38;
+  --gold-pale:  rgba(201,168,76,0.12);
+  --silver:     #c8d0dc;
+  --white:      #f4f6f9;
+  --muted:      #8a92a6;
+  --border:     rgba(201,168,76,0.18);
+  --border-dim: rgba(255,255,255,0.07);
+  --text:       #d8dde8;
+  --nav-h:      72px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  background: var(--anthracite);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ═══════════════════════════════════════════
+   SCROLL PROGRESS BAR
+═══════════════════════════════════════════ */
+#scrollBar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold), #e8c97a);
+  z-index: 9999;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 10px rgba(201,168,76,0.6);
+}
+
+/* ═══════════════════════════════════════════
+   CUSTOM CURSOR
+═══════════════════════════════════════════ */
+#cursor {
+  position: fixed;
+  width: 10px; height: 10px;
+  background: var(--gold);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+  mix-blend-mode: screen;
+}
+
+#cursor-ring {
+  position: fixed;
+  width: 38px; height: 38px;
+  border: 1.5px solid rgba(201,168,76,0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9997;
+  transform: translate(-50%, -50%);
+  transition: transform 0.18s ease, width 0.25s ease, height 0.25s ease, border-color 0.25s ease;
+}
+
+body:hover #cursor { opacity: 1; }
+a:hover ~ #cursor, button:hover ~ #cursor { transform: translate(-50%,-50%) scale(2); }
+
+/* ═══════════════════════════════════════════
+   TYPOGRAPHY HELPERS
+═══════════════════════════════════════════ */
+.serif { font-family: Georgia, "Times New Roman", serif; }
+
+.section-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.section-h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.75rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+.section-sub {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+/* ═══════════════════════════════════════════
+   SCROLL REVEAL SYSTEM
+═══════════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.7s cubic-bezier(.22,.68,0,1.2), transform 0.7s cubic-bezier(.22,.68,0,1.2);
+}
+
+.reveal.from-left  { transform: translateX(-40px) translateY(0); }
+.reveal.from-right { transform: translateX(40px) translateY(0); }
+.reveal.from-scale { transform: scale(0.9) translateY(20px); }
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0) scale(1);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
+.reveal-delay-7 { transition-delay: 0.7s; }
+.reveal-delay-8 { transition-delay: 0.8s; }
+.reveal-delay-9 { transition-delay: 0.9s; }
+.reveal-delay-10 { transition-delay: 1.0s; }
+
+/* ═══════════════════════════════════════════
+   ANIMATIONS
+═══════════════════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes lineGrow {
+  from { width: 0; }
+  to   { width: 60px; }
+}
+
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0); }
+  50%       { box-shadow: 0 0 0 12px rgba(201,168,76,0.12); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes scanline {
+  0%   { top: -10%; }
+  100% { top: 110%; }
+}
+
+@keyframes borderPulse {
+  0%, 100% { border-color: rgba(201,168,76,0.18); }
+  50%       { border-color: rgba(201,168,76,0.5); }
+}
+
+/* ═══════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════ */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  height: var(--nav-h);
+  background: rgba(16,19,42,0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 clamp(20px, 5vw, 64px);
+  transition: box-shadow 0.3s;
+}
+
+.nav.scrolled {
+  box-shadow: 0 4px 40px rgba(0,0,0,0.5);
+  border-bottom-color: rgba(201,168,76,0.3);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.nav-logo {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.08em;
+}
+
+.nav-logo span { color: var(--gold); }
+
+.nav-tagline {
+  font-size: 0.65rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  font-style: italic;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.2s;
+  position: relative;
+  cursor: none;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0; right: 100%;
+  height: 1px;
+  background: var(--gold);
+  transition: right 0.3s ease;
+}
+
+.nav-links a:hover { color: var(--white); }
+.nav-links a:hover::after { right: 0; }
+
+.nav-cta {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--navy-dark) !important;
+  background: var(--gold);
+  padding: 10px 22px;
+  border-radius: 4px;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  white-space: nowrap;
+  cursor: none;
+  animation: pulse-gold 3s ease-in-out infinite;
+}
+
+.nav-cta:hover {
+  background: var(--gold-dim);
+  box-shadow: 0 4px 24px rgba(201,168,76,0.4);
+  transform: translateY(-1px);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: none;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.nav-mobile {
+  display: none;
+  position: fixed;
+  top: var(--nav-h);
+  left: 0; right: 0;
+  background: rgba(10,13,30,0.98);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 24px clamp(20px, 5vw, 64px);
+  z-index: 999;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-mobile.open { display: flex; }
+
+.nav-mobile a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-dim);
+  cursor: none;
+}
+
+.nav-mobile a:last-child {
+  color: var(--gold);
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-tagline { display: none; }
+}
+
+/* ═══════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: calc(var(--nav-h) + 60px) clamp(20px, 5vw, 64px) 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Photo background */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('images/hero1.jpeg') center/cover no-repeat;
+  transform: scale(1.05);
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+
+/* Dark overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(8,10,22,0.92) 0%, rgba(16,20,44,0.85) 50%, rgba(10,13,26,0.95) 100%);
+}
+
+/* Canvas particles */
+#particleCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* diagonal texture */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -55deg,
+    transparent,
+    transparent 80px,
+    rgba(201,168,76,0.02) 80px,
+    rgba(201,168,76,0.02) 81px
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* scan line */
+.hero::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.15), transparent);
+  animation: scanline 6s linear infinite;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* big watermark */
+.hero-watermark {
+  position: absolute;
+  right: -2%;
+  bottom: -8%;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(200px, 28vw, 400px);
+  font-weight: 700;
+  color: rgba(255,255,255,0.025);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.04em;
+  z-index: 2;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 4;
+}
+
+.hero-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: fadeUp 0.7s ease both;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+  animation: lineGrow 0.8s 0.3s ease both;
+}
+
+.hero-h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  font-weight: 700;
+  line-height: 1.07;
+  color: var(--white);
+  max-width: 760px;
+  margin-bottom: 32px;
+  animation: fadeUp 0.7s 0.1s ease both;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+
+.hero-h1 em {
+  font-style: normal;
+  color: var(--gold);
+  position: relative;
+  display: inline-block;
+}
+
+.hero-h1 em::after {
+  content: '';
+  position: absolute;
+  bottom: 2px; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  border-radius: 1px;
+}
+
+.hero-sub {
+  font-size: clamp(1rem, 1.8vw, 1.18rem);
+  color: var(--silver);
+  max-width: 560px;
+  line-height: 1.8;
+  margin-bottom: 52px;
+  animation: fadeUp 0.7s 0.18s ease both;
+}
+
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.7s 0.26s ease both;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gold);
+  color: var(--navy-dark);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 16px 34px;
+  border-radius: 4px;
+  transition: background 0.2s, box-shadow 0.3s, transform 0.2s;
+  border: none;
+  cursor: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+  background-size: 200% 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+  animation: shimmer 0.8s ease;
+}
+
+.btn-primary:hover {
+  background: #d4b356;
+  box-shadow: 0 10px 32px rgba(201,168,76,0.45), 0 0 60px rgba(201,168,76,0.1);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--silver);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 16px 28px;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.18);
+  transition: border-color 0.2s, color 0.2s, background 0.2s, transform 0.2s;
+  cursor: none;
+}
+
+.btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201,168,76,0.05);
+  transform: translateY(-1px);
+}
+
+.hero-tagline {
+  margin-top: 60px;
+  font-style: italic;
+  font-size: 1.08rem;
+  color: var(--muted);
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  max-width: 480px;
+  animation: fadeUp 0.7s 0.34s ease both;
+}
+
+/* trust bar */
+.trust-bar {
+  background: rgba(8,10,24,0.9);
+  border-top: 1px solid var(--border);
+  padding: 22px clamp(20px, 5vw, 64px);
+  position: relative;
+  z-index: 5;
+}
+
+.trust-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--silver);
+}
+
+.trust-item::before {
+  content: '';
+  display: block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 8px rgba(201,168,76,0.6);
+  animation: pulse-gold 2.5s ease infinite;
+}
+
+@media (max-width: 640px) {
+  .trust-inner { justify-content: center; gap: 14px; }
+  .trust-item { font-size: 0.78rem; }
+}
+
+/* ═══════════════════════════════════════════
+   SEZIONI — SHARED
+═══════════════════════════════════════════ */
+.section {
+  padding: 96px clamp(20px, 5vw, 64px);
+  scroll-margin-top: var(--nav-h);
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gold-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-dim));
+  margin-bottom: 32px;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gold-line.animated::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+  animation: shimmer 2s ease infinite;
+  background-size: 200% 100%;
+}
+
+/* ═══════════════════════════════════════════
+   CHI SIAMO
+═══════════════════════════════════════════ */
+#chi-siamo {
+  background: linear-gradient(180deg, var(--navy-dark) 0%, #0d1020 100%);
+  position: relative;
+}
+
+#chi-siamo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(201,168,76,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.chi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  margin-bottom: 72px;
+}
+
+@media (max-width: 900px) {
+  .chi-grid { grid-template-columns: 1fr; gap: 48px; }
+}
+
+.chi-text p {
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+
+.chi-text p:last-child { margin-bottom: 0; }
+
+/* numeri */
+.numeri-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 64px;
+  position: relative;
+}
+
+.numeri-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(201,168,76,0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.numero-item {
+  background: var(--navy);
+  padding: 40px 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+
+.numero-item:hover {
+  background: #1e2448;
+}
+
+.numero-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%; right: 50%;
+  height: 2px;
+  background: var(--gold);
+  transition: left 0.4s ease, right 0.4s ease;
+}
+
+.numero-item:hover::after {
+  left: 0; right: 0;
+}
+
+.numero-val {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.numero-label {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 640px) {
+  .numeri-grid { grid-template-columns: 1fr; }
+}
+
+/* valori card */
+.valori-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .valori-grid { grid-template-columns: 1fr; }
+}
+
+.valore-card {
+  background: rgba(37,37,53,0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-dim);
+  border-radius: 8px;
+  padding: 36px 30px;
+  border-top: 3px solid var(--gold);
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.valore-card::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.valore-card:hover::before { opacity: 1; }
+
+.valore-card:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(201,168,76,0.2);
+  transform: translateY(-4px);
+}
+
+.valore-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+.valore-text {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+/* ═══════════════════════════════════════════
+   SERVIZI
+═══════════════════════════════════════════ */
+#servizi {
+  background: var(--anthracite);
+  position: relative;
+}
+
+#servizi::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.03) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.servizi-header {
+  margin-bottom: 56px;
+}
+
+.servizi-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1100px) {
+  .servizi-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 680px) {
+  .servizi-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 420px) {
+  .servizi-grid { grid-template-columns: 1fr; }
+}
+
+.servizio-card {
+  background: linear-gradient(145deg, #1f2236, #1a1d30);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+  cursor: none;
+}
+
+.servizio-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.servizio-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold), var(--gold-dim));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.servizio-card:hover {
+  border-color: rgba(201,168,76,0.28);
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.15);
+}
+
+.servizio-card:hover::before { opacity: 1; }
+
+.servizio-card:hover::after {
+  transform: scaleX(1);
+}
+
+.servizio-num {
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+  opacity: 0.6;
+}
+
+.servizio-icon {
+  font-size: 2rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 8px rgba(201,168,76,0.2));
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.servizio-card:hover .servizio-icon {
+  transform: scale(1.15);
+  filter: drop-shadow(0 4px 16px rgba(201,168,76,0.35));
+}
+
+.servizio-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3;
+}
+
+.servizio-desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.65;
+  flex: 1;
+}
+
+/* ═══════════════════════════════════════════
+   PERCHÉ SCEGLIERCI
+═══════════════════════════════════════════ */
+#perche {
+  background: linear-gradient(180deg, #0d1020 0%, var(--navy-dark) 100%);
+  position: relative;
+}
+
+.perche-header {
+  margin-bottom: 64px;
+  max-width: 700px;
+}
+
+.perche-header .section-sub { max-width: 100%; }
+
+.perche-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .perche-grid { grid-template-columns: 1fr; }
+}
+
+.perche-item {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 36px;
+  background: rgba(30,32,50,0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  border: 1px solid var(--border-dim);
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.perche-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.perche-item:hover {
+  border-color: rgba(201,168,76,0.22);
+  box-shadow: 0 8px 36px rgba(0,0,0,0.4);
+  transform: translateY(-3px);
+}
+
+.perche-item:hover::before { opacity: 1; }
+
+.perche-num {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: rgba(201,168,76,0.25);
+  line-height: 1;
+  min-width: 44px;
+  transition: color 0.3s;
+}
+
+.perche-item:hover .perche-num {
+  color: rgba(201,168,76,0.5);
+}
+
+.perche-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.perche-text {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+/* ═══════════════════════════════════════════
+   CTA / CONTATTI
+═══════════════════════════════════════════ */
+#contatti {
+  background: linear-gradient(135deg, #0a0c1e 0%, #12152e 50%, #0a0d20 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+#contatti::before {
+  content: '';
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+  top: -200px; right: -100px;
+  pointer-events: none;
+}
+
+#contatti::after {
+  content: '';
+  position: absolute;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(100,150,255,0.04) 0%, transparent 70%);
+  bottom: -100px; left: -100px;
+  pointer-events: none;
+}
+
+.cta-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .cta-inner { grid-template-columns: 1fr; gap: 48px; }
+}
+
+.cta-h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.cta-sub {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+.cta-nota {
+  margin-top: 20px;
+  font-size: 0.78rem;
+  color: rgba(138,146,166,0.6);
+  letter-spacing: 0.02em;
+}
+
+.cta-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 24px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px;
+  transition: border-color 0.3s, background 0.3s, transform 0.2s;
+}
+
+.contact-item:hover {
+  border-color: rgba(201,168,76,0.25);
+  background: rgba(201,168,76,0.04);
+  transform: translateX(4px);
+}
+
+.contact-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  min-width: 32px;
+}
+
+.contact-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.contact-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.contact-value a {
+  color: var(--white);
+  transition: color 0.2s;
+  cursor: none;
+}
+
+.contact-value a:hover { color: var(--gold); }
+
+/* ═══════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════ */
+footer {
+  background: #080a14;
+  border-top: 1px solid rgba(201,168,76,0.12);
+}
+
+.footer-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px clamp(20px, 5vw, 64px) 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+}
+
+@media (max-width: 900px) {
+  .footer-main { grid-template-columns: 1fr; gap: 40px; }
+}
+
+.footer-logo {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+
+.footer-logo span { color: var(--gold); }
+
+.footer-tagline {
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.footer-desc {
+  font-size: 0.82rem;
+  color: #5a6070;
+  line-height: 1.65;
+}
+
+.footer-col-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  font-size: 0.85rem;
+  color: var(--muted);
+  transition: color 0.2s, transform 0.2s;
+  display: inline-block;
+  cursor: none;
+}
+
+.footer-links a:hover { color: var(--white); transform: translateX(4px); }
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-contact-item {
+  font-size: 0.85rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.footer-contact-item a {
+  color: var(--muted);
+  transition: color 0.2s;
+  cursor: none;
+}
+
+.footer-contact-item a:hover { color: var(--gold); }
+
+.footer-bottom {
+  border-top: 1px solid var(--border-dim);
+  padding: 20px clamp(20px, 5vw, 64px);
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.76rem;
+  color: #3a4050;
+}
+
+.footer-bottom a {
+  color: #4a5060;
+  transition: color 0.2s;
+  cursor: none;
+}
+
+.footer-bottom a:hover { color: var(--muted); }
+
+.footer-bottom-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* ═══════════════════════════════════════════
+   COOKIE BANNER GDPR
+═══════════════════════════════════════════ */
+#cookieBanner {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 9999;
+  background: rgba(8,10,24,0.98);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -4px 40px rgba(0,0,0,0.6);
+  padding: 20px clamp(20px, 5vw, 64px);
+  display: none;
+}
+
+.cookie-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cookie-text {
+  flex: 1;
+  min-width: 260px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.cookie-text a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: none;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.cookie-btn {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 9px 20px;
+  border-radius: 4px;
+  cursor: none;
+  border: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.cookie-btn-accept {
+  background: var(--gold);
+  color: var(--navy-dark);
+}
+
+.cookie-btn-accept:hover {
+  background: var(--gold-dim);
+  box-shadow: 0 4px 16px rgba(201,168,76,0.3);
+}
+
+.cookie-btn-reject {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid #2a3050;
+}
+
+.cookie-btn-reject:hover {
+  border-color: var(--muted);
+  color: var(--silver);
+}
+
+.cookie-btn-manage {
+  background: transparent;
+  color: #4a5068;
+  border: 1px solid #1e2540;
+  font-size: 0.75rem;
+}
+
+.cookie-btn-manage:hover {
+  color: var(--muted);
+  border-color: #2a3050;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE FIXES
+═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  body { cursor: auto; }
+  #cursor, #cursor-ring { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- SCROLL PROGRESS -->
+<div id="scrollBar"></div>
+
+<!-- CUSTOM CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- ██ NAV ██████████████████████████████████████ -->
+<nav class="nav" id="mainNav" role="navigation" aria-label="Navigazione principale">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand" aria-label="K9 Services — Home">
+      <img src="images/logo.png" alt="K9 Services" class="nav-logo-img" style="height:44px;width:auto;display:block;">
+      <div class="nav-tagline">Sicurezza cinofila professionale dal 1999</div>
+    </a>
+    <div class="nav-links" aria-label="Menu desktop">
+      <a href="#chi-siamo">Chi siamo</a>
+      <a href="#servizi">Servizi</a>
+      <a href="#perche">Perché noi</a>
+      <a href="#contatti" class="nav-cta">Contattaci</a>
+    </div>
+    <button class="nav-toggle" aria-label="Apri menu" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="nav-mobile" id="navMobile" role="navigation" aria-label="Menu mobile">
+  <a href="#chi-siamo" onclick="toggleNav()">Chi siamo</a>
+  <a href="#servizi" onclick="toggleNav()">I nostri servizi</a>
+  <a href="#perche" onclick="toggleNav()">Perché sceglierci</a>
+  <a href="#contatti" onclick="toggleNav()">Contattaci</a>
+</div>
+
+<!-- ██ HERO ██████████████████████████████████████ -->
+<section class="hero" id="home" aria-labelledby="hero-h1">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+  <div class="hero-watermark" aria-hidden="true">K9</div>
+
+  <div class="hero-inner">
+    <div class="hero-eyebrow" aria-hidden="true">Sicurezza Cinofila Specializzata</div>
+    <h1 class="hero-h1 serif" id="hero-h1">
+      25 anni di sicurezza cinofila.<br><em>Zero compromessi.</em>
+    </h1>
+    <p class="hero-sub">
+      Cani antiesplosivi, antidroga, patrol dog, maritime security e close protection<br>
+      per aziende, enti pubblici e privati.<br>
+      Operativi H24. Copertura nazionale e internazionale.
+    </p>
+    <div class="hero-ctas">
+      <a href="#contatti" class="btn-primary">Richiedi una consulenza &rarr;</a>
+      <a href="#servizi" class="btn-ghost">Scopri i servizi &darr;</a>
+    </div>
+    <p class="hero-tagline serif">
+      "Il loro fiuto, la nostra passione, la vostra sicurezza."
+    </p>
+  </div>
+</section>
+
+<!-- Trust Bar -->
+<div class="trust-bar" role="complementary" aria-label="Credenziali K9 Services">
+  <div class="trust-inner">
+    <div class="trust-item reveal reveal-delay-1">Operativi dal 1999</div>
+    <div class="trust-item reveal reveal-delay-2">Copertura Italia e internazionale</div>
+    <div class="trust-item reveal reveal-delay-3">Disponibili H24 &middot; 7 giorni su 7</div>
+    <div class="trust-item reveal reveal-delay-4">Contatto dedicato IT &middot; EN</div>
+  </div>
+</div>
+
+<!-- ██ CHI SIAMO █████████████████████████████████ -->
+<section class="section" id="chi-siamo" aria-labelledby="chi-siamo-h2">
+  <div class="section-inner">
+    <div class="chi-grid">
+      <div class="reveal from-left">
+        <p class="section-label">Chi siamo</p>
+        <div class="gold-line animated"></div>
+        <h2 class="section-h2" id="chi-siamo-h2">
+          "Non vediamo la sicurezza come un servizio.<br>La vediamo come una responsabilità."
+        </h2>
+      </div>
+      <div class="chi-text reveal from-right reveal-delay-2">
+        <p>K9 Services opera nel settore della sicurezza cinofila professionale dal 1999. In 25 anni abbiamo formato e impiegato unità cinofile per la protezione di aziende, istituzioni, infrastrutture critiche e privati — in Italia e all'estero.</p>
+        <p>Ogni cane che entra in servizio con noi ha superato un percorso di addestramento rigoroso, certificato e documentato. Ogni operatore che lo affianca ha anni di esperienza sul campo.</p>
+        <p>Non proponiamo soluzioni standard. Ogni intervento viene progettato sulle esigenze reali del cliente — le dimensioni del sito, il tipo di minaccia, il contesto operativo.</p>
+        <p>Siamo disponibili H24, 365 giorni l'anno. Perché la sicurezza non ha orari.</p>
+      </div>
+    </div>
+
+    <!-- Numeri chiave -->
+    <div class="numeri-grid reveal" role="list" aria-label="Numeri chiave K9 Services">
+      <div class="numero-item" role="listitem">
+        <div class="numero-val" data-count="25" data-suffix="">25</div>
+        <div class="numero-label">Anni di attività ininterrotta</div>
+      </div>
+      <div class="numero-item" role="listitem">
+        <div class="numero-val" data-count="1000" data-suffix="+" data-prefix="+">+1.000</div>
+        <div class="numero-label">Missioni completate in Italia e all'estero</div>
+      </div>
+      <div class="numero-item" role="listitem">
+        <div class="numero-val">H24 &middot; 365</div>
+        <div class="numero-label">Reperibilità garantita, tutto l'anno</div>
+      </div>
+    </div>
+
+    <!-- Valori -->
+    <div class="valori-grid" role="list" aria-label="Valori K9 Services">
+      <div class="valore-card reveal reveal-delay-1" role="listitem">
+        <div class="valore-title">Affidabilità</div>
+        <p class="valore-text">Manteniamo quello che promettiamo. Ogni incarico riceve la stessa attenzione, che si tratti di un evento privato o di un'infrastruttura critica.</p>
+      </div>
+      <div class="valore-card reveal reveal-delay-3" role="listitem">
+        <div class="valore-title">Competenza certificata</div>
+        <p class="valore-text">I nostri operatori e le nostre unità cinofile sono formati secondo gli standard professionali più rigorosi del settore. La documentazione è disponibile su richiesta.</p>
+      </div>
+      <div class="valore-card reveal reveal-delay-5" role="listitem">
+        <div class="valore-title">Discrezione</div>
+        <p class="valore-text">Operiamo senza interferire con le attività del cliente. La sicurezza efficace è quella che non si vede — ma c'è.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ██ SERVIZI ████████████████████████████████████ -->
+<section class="section" id="servizi" aria-labelledby="servizi-h2">
+  <div class="section-inner">
+    <div class="servizi-header reveal">
+      <p class="section-label">I nostri servizi</p>
+      <div class="gold-line animated"></div>
+      <h2 class="section-h2" id="servizi-h2">Ogni minaccia ha una risposta specializzata.</h2>
+      <p class="section-sub">10 aree di intervento. Tutte coperte da team certificati con anni di esperienza sul campo.</p>
+    </div>
+
+    <div class="servizi-grid" role="list" aria-label="Servizi K9 Services">
+
+      <article class="servizio-card reveal reveal-delay-1" role="listitem" data-tilt>
+        <div class="servizio-num">01</div>
+        <div class="servizio-icon" aria-hidden="true">💣</div>
+        <h3 class="servizio-title">Rilevamento Esplosivi e Sostanze Stupefacenti</h3>
+        <p class="servizio-desc">Unità cinofile specializzate nel rilevamento di esplosivi, armi e sostanze stupefacenti. Impiegate in contesti ad alto rischio: aeroporti, eventi pubblici, edifici istituzionali, bonifiche preventive.</p>
+      </article>
+
+      <article class="servizio-card reveal reveal-delay-2" role="listitem" data-tilt>
+        <div class="servizio-num">02</div>
+        <div class="servizio-icon" aria-hidden="true">🐕</div>
+        <h3 class="servizio-title">Pattugliamento Cinofilo Diurno e Notturno</h3>
+        <p class="servizio-desc">Presidio attivo con unità cinofile per deterrenza, controllo perimetrale e vigilanza di aree industriali, cantieri, magazzini e proprietà private.</p>
+      </article>
+
+      <article class="servizio-card reveal reveal-delay-3" role="listitem" data-tilt>
+        <div class="servizio-num">03</div>
+        <div class="servizio-icon" aria-hidden="true">🔍</div>
+        <h3 class="servizio-title">Ricerca Persone Scomparse</h3>
+        <p class="servizio-desc">Unità cinofile SAR per il ritrovamento di persone scomparse in ambienti urbani, rurali e in condizioni difficili. Coordinamento con forze dell'ordine e protezione civile.</p>
+      </article>
+
+      <article class="servizio-card reveal reveal-delay-4" role="listitem" data-tilt>
+        <div class="servizio-num">04</div>
+        <div class="servizio-icon" aria-hidden="true">⚓</div>
+        <h3 class="servizio-title">Sicurezza Marittima</h3>
+        <p class="servizio-desc">Protezione di imbarcazioni, porti, infrastrutture portuali e personale a bordo. Unità cinofile addestrate per operare in ambienti navali.</p>
+      </article>
+
+      <article class="servizio-card reveal reveal-delay-5" role="listitem" data-tilt>
+        <div class="servizio-num">05</div>
+        <div class="servizio-icon" aria-hidden="true">🛡️</div>
+        <h3 class="servizio-title">Protezione Ravvicinata VIP</h3>
+        <p class="servizio-desc">Sicurezza personale per dirigenti, figure istituzionali, personalità pubbliche e privati che richiedono protezione discreta e professionale.</p>
+      </article>
+
+      <article class="servizio-card reveal reveal-delay-1" role="listitem" data-tilt>
+        <div class="servizio-num">06</div>
+        <div class="servizio-icon" aria-hidden="true">⚠️</div>
+        <h3 class="servizio-title">Rilevamento Sostanze Tossiche e Veleni</h3>
+        <p class="servizio-desc">Unità cinofile specializzate nel rilevamento di bocconi avvelenati e sostanze tossiche. Protezione concreta per proprietà, parchi, aree verdi e strutture.</p>
+      </article>
+
+      <article class="servizio-card reveal reveal-delay-2" role="listitem" data-tilt>
+        <div class="servizio-num">07</div>
+        <div class="servizio-icon" aria-hidden="true">🌿</div>
+        <h3 class="servizio-title">Bonifiche e Ispezioni Ambientali</h3>
+        <p class="servizio-desc">Ispezioni cinofile per il rilevamento di sostanze illecite, materiali pericolosi o contaminanti in ambienti chiusi e all'aperto.</p>
+      </article>
+
+      <article class="servizio-card reveal reveal-delay-3" role="listitem" data-tilt>
+        <div class="servizio-num">08</div>
+        <div class="servizio-icon" aria-hidden="true">🦅</div>
+        <h3 class="servizio-title">Contrasto al Bracconaggio e Protezione Fauna</h3>
+        <p class="servizio-desc">Unità cinofile per la sorveglianza di riserve naturali, aree protette e proprietà private contro il bracconaggio.</p>
+      </article>
+
+      <article class="servizio-card reveal reveal-delay-4" role="listitem" data-tilt>
+        <div class="servizio-num">09</div>
+        <div class="servizio-icon" aria-hidden="true">👁️</div>
+        <h3 class="servizio-title">Civil Detection — Rilevamento Civile Specializzato</h3>
+        <p class="servizio-desc">Unità cinofile per attività di rilevamento in contesti civili: controllo accessi, eventi privati e pubblici, presidi aziendali.</p>
+      </article>
+
+      <article class="servizio-card reveal reveal-delay-5" role="listitem" data-tilt>
+        <div class="servizio-num">10</div>
+        <div class="servizio-icon" aria-hidden="true">📋</div>
+        <h3 class="servizio-title">Formazione Professionale e Corsi Online</h3>
+        <p class="servizio-desc">Percorsi formativi per operatori cinofili, guardie giurate, conduttori e professionisti della sicurezza. Corsi in aula e moduli e-learning da remoto.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ██ PERCHÉ SCEGLIERCI █████████████████████████ -->
+<section class="section" id="perche" aria-labelledby="perche-h2">
+  <div class="section-inner">
+    <div class="perche-header reveal">
+      <p class="section-label">Perché sceglierci</p>
+      <div class="gold-line animated"></div>
+      <h2 class="section-h2" id="perche-h2">25 anni di operazioni sul campo.<br>Non teoria &mdash; pratica.</h2>
+      <p class="section-sub">Quando scegliete K9 Services, scegliete un partner che ha già affrontato le situazioni che volete prevenire.</p>
+    </div>
+
+    <div class="perche-grid" role="list">
+
+      <div class="perche-item reveal reveal-delay-1" role="listitem">
+        <div class="perche-num" aria-hidden="true">I</div>
+        <div class="perche-body">
+          <h3 class="perche-title">25 anni di attività documentata</h3>
+          <p class="perche-text">Dal 1999, K9 Services opera in Italia e all'estero su incarichi civili, istituzionali e privati. La nostra esperienza non è autocertificata — è verificabile attraverso le missioni completate e le certificazioni dei nostri operatori.</p>
+        </div>
+      </div>
+
+      <div class="perche-item reveal reveal-delay-2" role="listitem">
+        <div class="perche-num" aria-hidden="true">II</div>
+        <div class="perche-body">
+          <h3 class="perche-title">Disponibili quando serve davvero</h3>
+          <p class="perche-text">La sicurezza non si ferma alla fine dell'orario di ufficio. Siamo operativi e raggiungibili H24, 7 giorni su 7, 365 giorni l'anno. Emergenze, interventi urgenti, consulenze immediate.</p>
+        </div>
+      </div>
+
+      <div class="perche-item reveal reveal-delay-3" role="listitem">
+        <div class="perche-num" aria-hidden="true">III</div>
+        <div class="perche-body">
+          <h3 class="perche-title">In Italia e oltre confine</h3>
+          <p class="perche-text">Operiamo su tutto il territorio italiano e disponiamo di una rete di partner qualificati per interventi internazionali — maritime security, close protection all'estero, missioni in contesti complessi.</p>
+        </div>
+      </div>
+
+      <div class="perche-item reveal reveal-delay-4" role="listitem">
+        <div class="perche-num" aria-hidden="true">IV</div>
+        <div class="perche-body">
+          <h3 class="perche-title">Nessun cliente è uguale all'altro</h3>
+          <p class="perche-text">Ogni incarico inizia con un'analisi delle esigenze reali del cliente. Nessun pacchetto standard, nessuna risposta preconfezionata. Il piano operativo lo costruiamo insieme — prima di iniziare, non durante.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ██ CTA FINALE / CONTATTI ████████████████████ -->
+<section class="section" id="contatti" aria-labelledby="cta-h2">
+  <div class="section-inner">
+    <div class="cta-inner">
+      <div class="reveal from-left">
+        <p class="section-label">Contatti</p>
+        <div class="gold-line animated"></div>
+        <h2 class="cta-h2 serif" id="cta-h2">Avete una necessità di sicurezza.<br>Parliamone.</h2>
+        <p class="cta-sub">Che si tratti di un sopralluogo, di una consulenza iniziale o di un intervento urgente &mdash; il primo contatto non costa nulla. La risposta arriva in poche ore.</p>
+        <a href="tel:+393381371226" class="btn-primary">Contattaci ora &rarr;</a>
+        <p class="cta-nota">Consulenza iniziale gratuita &middot; Preventivo senza impegno &middot; Massima discrezione garantita</p>
+      </div>
+
+      <div class="cta-contacts reveal from-right reveal-delay-2" role="complementary" aria-label="Contatti diretti">
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">📞</div>
+          <div class="contact-body">
+            <div class="contact-label">Telefono</div>
+            <div class="contact-value"><a href="tel:+393381371226">+39.338.1371226</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">📞</div>
+          <div class="contact-body">
+            <div class="contact-label">International</div>
+            <div class="contact-value"><a href="tel:+393383530793">+39.338.3530793</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">✉</div>
+          <div class="contact-body">
+            <div class="contact-label">Email</div>
+            <div class="contact-value"><a href="mailto:xplorer.academy@gmail.com">xplorer.academy@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">⏱</div>
+          <div class="contact-body">
+            <div class="contact-label">Risposta</div>
+            <div class="contact-value" style="font-size:0.88rem;color:var(--muted);">Garantita entro 24h &middot; Urgenze H24</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ██ FOOTER █████████████████████████████████████ -->
+<footer role="contentinfo">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <div class="footer-logo"><span>K9</span> Services</div>
+      <p class="footer-tagline">"Il loro fiuto, la nostra passione, la vostra sicurezza."</p>
+      <p class="footer-desc">Sicurezza cinofila professionale dal 1999.<br>Operativi in Italia e all'estero.</p>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Link rapidi</div>
+      <nav class="footer-links" aria-label="Link footer">
+        <a href="#chi-siamo">Chi siamo</a>
+        <a href="#servizi">I nostri servizi</a>
+        <a href="#perche">Perché sceglierci</a>
+        <a href="#contatti">Contatti</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </nav>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Contatti</div>
+      <div class="footer-contacts">
+        <div class="footer-contact-item">📞 <a href="tel:+393381371226">+39.338.1371226</a> (IT)</div>
+        <div class="footer-contact-item">📞 <a href="tel:+393383530793">+39.338.3530793</a> (EN)</div>
+        <div class="footer-contact-item">✉ <a href="mailto:xplorer.academy@gmail.com">xplorer.academy@gmail.com</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>&copy; 2026 K9 Services &middot; P.IVA IT03501350130 &middot; Tutti i diritti riservati.</span>
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookie.html">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ██ COOKIE BANNER GDPR █████████████████████████ -->
+<div id="cookieBanner" role="dialog" aria-label="Gestione cookie" aria-live="polite">
+  <div class="cookie-inner">
+    <p class="cookie-text">
+      Utilizziamo cookie tecnici essenziali per il corretto funzionamento del sito. Nessun cookie di profilazione o tracciamento commerciale.
+      Leggi la nostra <a href="privacy.html">Privacy Policy</a> e la <a href="cookie.html">Cookie Policy</a>.
+    </p>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-btn-manage" onclick="manageCookies()">Gestisci</button>
+      <button class="cookie-btn cookie-btn-reject" onclick="dismissCookies('refused')">Rifiuta tutto</button>
+      <button class="cookie-btn cookie-btn-accept" onclick="dismissCookies('accepted')">Accetto</button>
+    </div>
+  </div>
+</div>
+
+<!-- ██ SCRIPT █████████████████████████████████████ -->
+<script>
+/* ══════════════════════════════════════════
+   CUSTOM CURSOR
+══════════════════════════════════════════ */
+(function() {
+  var dot = document.getElementById('cursor');
+  var ring = document.getElementById('cursor-ring');
+  if (!dot || !ring) return;
+
+  var mx = 0, my = 0;
+  var rx = 0, ry = 0;
+
+  document.addEventListener('mousemove', function(e) {
+    mx = e.clientX;
+    my = e.clientY;
+    dot.style.left = mx + 'px';
+    dot.style.top  = my + 'px';
+  });
+
+  function animateRing() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px';
+    ring.style.top  = ry + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  /* hover state on interactive elements */
+  document.querySelectorAll('a, button').forEach(function(el) {
+    el.addEventListener('mouseenter', function() {
+      dot.style.width  = '16px';
+      dot.style.height = '16px';
+      ring.style.width  = '52px';
+      ring.style.height = '52px';
+      ring.style.borderColor = 'rgba(201,168,76,0.8)';
+    });
+    el.addEventListener('mouseleave', function() {
+      dot.style.width  = '10px';
+      dot.style.height = '10px';
+      ring.style.width  = '38px';
+      ring.style.height = '38px';
+      ring.style.borderColor = 'rgba(201,168,76,0.5)';
+    });
+  });
+})();
+
+/* ══════════════════════════════════════════
+   SCROLL PROGRESS BAR
+══════════════════════════════════════════ */
+var scrollBar = document.getElementById('scrollBar');
+window.addEventListener('scroll', function() {
+  var scrollTop  = window.scrollY;
+  var docHeight  = document.documentElement.scrollHeight - window.innerHeight;
+  var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  scrollBar.style.width = pct + '%';
+}, { passive: true });
+
+/* ══════════════════════════════════════════
+   PARTICLE CANVAS
+══════════════════════════════════════════ */
+(function() {
+  var canvas = document.getElementById('particleCanvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+
+  var W, H, particles;
+  var PARTICLE_COUNT = 70;
+  var MAX_DIST = 130;
+  var GOLD = 'rgba(201,168,76,';
+  var WHITE = 'rgba(200,210,230,';
+
+  function resize() {
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+
+  function Particle() {
+    this.x  = Math.random() * W;
+    this.y  = Math.random() * H;
+    this.vx = (Math.random() - 0.5) * 0.4;
+    this.vy = (Math.random() - 0.5) * 0.4;
+    this.r  = Math.random() * 1.8 + 0.5;
+    this.gold = Math.random() > 0.7;
+  }
+
+  Particle.prototype.update = function() {
+    this.x += this.vx;
+    this.y += this.vy;
+    if (this.x < 0) this.x = W;
+    if (this.x > W) this.x = 0;
+    if (this.y < 0) this.y = H;
+    if (this.y > H) this.y = 0;
+  };
+
+  function init() {
+    resize();
+    particles = [];
+    for (var i = 0; i < PARTICLE_COUNT; i++) {
+      particles.push(new Particle());
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+
+    /* connections */
+    for (var i = 0; i < particles.length; i++) {
+      for (var j = i + 1; j < particles.length; j++) {
+        var dx = particles[i].x - particles[j].x;
+        var dy = particles[i].y - particles[j].y;
+        var d  = Math.sqrt(dx*dx + dy*dy);
+        if (d < MAX_DIST) {
+          var alpha = (1 - d / MAX_DIST) * 0.25;
+          ctx.strokeStyle = GOLD + alpha + ')';
+          ctx.lineWidth   = 0.6;
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    /* dots */
+    for (var k = 0; k < particles.length; k++) {
+      var p = particles[k];
+      p.update();
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = (p.gold ? GOLD : WHITE) + '0.7)';
+      ctx.fill();
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', function() {
+    resize();
+  });
+
+  init();
+  draw();
+})();
+
+/* ══════════════════════════════════════════
+   PARALLAX HERO
+══════════════════════════════════════════ */
+(function() {
+  var heroBg = document.getElementById('heroBg');
+  if (!heroBg) return;
+  window.addEventListener('scroll', function() {
+    var y = window.scrollY;
+    if (y < window.innerHeight * 1.2) {
+      heroBg.style.transform = 'scale(1.05) translateY(' + (y * 0.25) + 'px)';
+    }
+  }, { passive: true });
+})();
+
+/* ══════════════════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════════════════ */
+(function() {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    /* fallback: show all */
+    els.forEach(function(el) { el.classList.add('visible'); });
+    return;
+  }
+
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  els.forEach(function(el) { obs.observe(el); });
+})();
+
+/* ══════════════════════════════════════════
+   NUMBER COUNTER ANIMATION
+══════════════════════════════════════════ */
+(function() {
+  var counters = document.querySelectorAll('[data-count]');
+  if (!counters.length) return;
+
+  var started = false;
+
+  function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+
+  function animateCounter(el) {
+    var target = parseInt(el.dataset.count);
+    var duration = 1800;
+    var start = null;
+
+    function step(ts) {
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var val = Math.round(easeOut(progress) * target);
+      if (target >= 1000) {
+        el.textContent = '+' + val.toLocaleString('it-IT');
+      } else {
+        el.textContent = val;
+      }
+      if (progress < 1) requestAnimationFrame(step);
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    counters.forEach(animateCounter);
+    return;
+  }
+
+  var obs = new IntersectionObserver(function(entries) {
+    if (entries.some(function(e) { return e.isIntersecting; }) && !started) {
+      started = true;
+      counters.forEach(animateCounter);
+      obs.disconnect();
+    }
+  }, { threshold: 0.5 });
+
+  counters.forEach(function(c) { obs.observe(c); });
+})();
+
+/* ══════════════════════════════════════════
+   3D CARD TILT
+══════════════════════════════════════════ */
+(function() {
+  var cards = document.querySelectorAll('[data-tilt]');
+  cards.forEach(function(card) {
+    card.addEventListener('mousemove', function(e) {
+      var r   = card.getBoundingClientRect();
+      var cx  = r.left + r.width / 2;
+      var cy  = r.top  + r.height / 2;
+      var dx  = (e.clientX - cx) / (r.width  / 2);
+      var dy  = (e.clientY - cy) / (r.height / 2);
+      card.style.transform =
+        'perspective(600px) rotateX(' + (-dy * 8) + 'deg) rotateY(' + (dx * 8) + 'deg) translateY(-6px) scale(1.02)';
+    });
+    card.addEventListener('mouseleave', function() {
+      card.style.transform = '';
+    });
+  });
+})();
+
+/* ══════════════════════════════════════════
+   NAV MOBILE
+══════════════════════════════════════════ */
+function toggleNav() {
+  document.getElementById('navMobile').classList.toggle('open');
+}
+
+document.addEventListener('click', function(e) {
+  var m = document.getElementById('navMobile');
+  if (m.classList.contains('open') &&
+      !m.contains(e.target) &&
+      !document.querySelector('.nav-toggle').contains(e.target)) {
+    m.classList.remove('open');
+  }
+});
+
+/* ══════════════════════════════════════════
+   NAV SCROLL STATE
+══════════════════════════════════════════ */
+window.addEventListener('scroll', function() {
+  var nav = document.getElementById('mainNav');
+  if (window.scrollY > 60) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+}, { passive: true });
+
+/* ══════════════════════════════════════════
+   SMOOTH SCROLL OFFSET
+══════════════════════════════════════════ */
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var target = document.querySelector(this.getAttribute('href'));
+    if (!target) return;
+    e.preventDefault();
+    var navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 72;
+    window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - navH, behavior: 'smooth' });
+  });
+});
+
+/* ══════════════════════════════════════════
+   COOKIE BANNER
+══════════════════════════════════════════ */
+(function() {
+  if (!localStorage.getItem('k9_cookie_choice')) {
+    document.getElementById('cookieBanner').style.display = 'block';
+  }
+})();
+
+function dismissCookies(choice) {
+  localStorage.setItem('k9_cookie_choice', choice);
+  var b = document.getElementById('cookieBanner');
+  b.style.transition = 'opacity 0.35s, transform 0.35s';
+  b.style.opacity = '0';
+  b.style.transform = 'translateY(20px)';
+  setTimeout(function() { b.style.display = 'none'; }, 380);
+}
+
+function manageCookies() {
+  alert('Gestione preferenze cookie — funzione disponibile a breve.\n\nAl momento utilizziamo solo cookie tecnici essenziali, non disattivabili.');
+}
+</script>
+
+</body>
+</html>
