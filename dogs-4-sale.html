@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dogs 4 Sale | K9 Services — Unità Cinofile Certificate</title>
+<meta name="description" content="Cani da lavoro certificati per forze dell'ordine, agenzie di sicurezza e privati qualificati. Ogni unità è selezionata, addestrata e documentata da K9 Services.">
+<meta property="og:title" content="Dogs 4 Sale — K9 Services">
+<meta property="og:description" content="Unità cinofile certificate pronte all'impiego. Selezione professionale, addestramento documentato.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.k9services.it/dogs-4-sale.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐕</text></svg>">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#1a1f3a;--navy-dark:#10132a;--anthracite:#1e1e1e;--surface:#252535;--gold:#C9A84C;--gold-dim:#a88a38;--white:#f4f6f9;--muted:#8a92a6;--border:rgba(201,168,76,0.18);--border-dim:rgba(255,255,255,0.07);--text:#d8dde8;--nav-h:80px}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;background:var(--anthracite);color:var(--text);font-size:16px;line-height:1.65;overflow-x:hidden;cursor:none}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.serif{font-family:Georgia,"Times New Roman",serif}
+
+/* SCROLL BAR */
+#scrollBar{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--gold-dim),var(--gold),#e8c97a);z-index:9999;transition:width .1s linear;box-shadow:0 0 10px rgba(201,168,76,.6)}
+
+/* CURSOR */
+#cursor{position:fixed;width:10px;height:10px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .1s ease,width .2s ease,height .2s ease;mix-blend-mode:screen}
+#cursor-ring{position:fixed;width:38px;height:38px;border:1.5px solid rgba(201,168,76,.5);border-radius:50%;pointer-events:none;z-index:9997;transform:translate(-50%,-50%);transition:transform .18s ease,width .25s ease,height .25s ease,border-color .25s ease}
+
+/* TYPOGRAPHY */
+.section-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block}
+.section-h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.75rem,3.5vw,2.6rem);font-weight:700;line-height:1.2;color:var(--white);margin-bottom:14px}
+.section-sub{font-size:1.05rem;color:var(--muted);max-width:640px;line-height:1.7}
+.divider-gold{width:60px;height:2px;background:var(--gold);margin:20px 0 32px}
+
+/* ANIMATIONS */
+@keyframes pulse-gold{0%,100%{box-shadow:0 0 0 0 rgba(201,168,76,0)}50%{box-shadow:0 0 0 12px rgba(201,168,76,.12)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .7s cubic-bezier(.22,.68,0,1.2),transform .7s cubic-bezier(.22,.68,0,1.2)}
+.reveal.from-left{transform:translateX(-40px)}
+.reveal.from-right{transform:translateX(40px)}
+.reveal.visible{opacity:1;transform:translateX(0) translateY(0)}
+.reveal-delay-1{transition-delay:.1s}.reveal-delay-2{transition-delay:.2s}.reveal-delay-3{transition-delay:.3s}
+.reveal-delay-4{transition-delay:.4s}.reveal-delay-5{transition-delay:.5s}.reveal-delay-6{transition-delay:.6s}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-h);background:rgba(16,19,42,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 clamp(20px,5vw,64px);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 4px 40px rgba(0,0,0,.5);border-bottom-color:rgba(201,168,76,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.nav-brand{display:flex;flex-direction:row;align-items:center;gap:12px}
+.nav-logo{font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;font-weight:700;color:var(--white);letter-spacing:.08em}
+.nav-logo span{color:var(--gold)}
+.nav-tagline{font-size:.65rem;color:var(--muted);letter-spacing:.06em;font-style:italic}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:color .2s;position:relative;cursor:none}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:100%;height:1px;background:var(--gold);transition:right .3s ease}
+.nav-links a:hover{color:var(--white)}
+.nav-links a:hover::after{right:0}
+.nav-links a.active{color:var(--gold)}
+.nav-cta{font-size:.78rem!important;font-weight:700!important;color:var(--navy-dark)!important;background:var(--gold);padding:10px 20px;border-radius:4px;transition:background .2s,box-shadow .2s,transform .2s;white-space:nowrap;animation:pulse-gold 3s ease-in-out infinite}
+.nav-cta:hover{background:var(--gold-dim)!important;box-shadow:0 4px 24px rgba(201,168,76,.4);transform:translateY(-1px)}
+.nav-cta::after{display:none!important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:none;padding:4px;background:none;border:none}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
+.nav-mobile{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:rgba(10,13,30,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:24px clamp(20px,5vw,64px);z-index:999;flex-direction:column;gap:20px}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-size:.9rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:8px 0;border-bottom:1px solid var(--border-dim);cursor:none}
+.nav-mobile a:last-child{color:var(--gold);border-bottom:none}
+@media(max-width:768px){.nav-links{display:none}.nav-toggle{display:flex}.nav-tagline{display:none}}
+
+/* PAGE HERO */
+.page-hero{padding:calc(var(--nav-h) + 64px) clamp(20px,5vw,64px) 80px;background:var(--navy-dark);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 0%,rgba(201,168,76,.06) 0%,transparent 70%)}
+.page-hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1}
+.breadcrumb{font-size:.78rem;color:var(--muted);margin-bottom:24px}
+.breadcrumb a{color:var(--gold)}
+.page-hero-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.page-hero-eyebrow::before{content:'';display:block;width:40px;height:1px;background:var(--gold);opacity:.5}
+.page-hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:700;line-height:1.15;color:var(--white);margin-bottom:20px}
+.page-hero h1 em{color:var(--gold);font-style:normal}
+.page-hero-sub{font-size:1.1rem;color:var(--muted);max-width:640px;line-height:1.7;margin-bottom:32px}
+.btn-group{display:flex;flex-wrap:wrap;gap:16px}
+
+/* SECTIONS */
+.section{padding:clamp(60px,8vw,120px) clamp(20px,5vw,64px)}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-dark{background:var(--navy)}
+.section-darker{background:var(--navy-dark)}
+
+/* BTN */
+.btn{display:inline-block;padding:14px 32px;border-radius:4px;font-weight:700;font-size:.9rem;text-transform:uppercase;letter-spacing:.06em;cursor:none;transition:all .3s;border:none}
+.btn-primary{background:var(--gold);color:var(--navy-dark)}
+.btn-primary:hover{background:var(--gold-dim);box-shadow:0 8px 32px rgba(201,168,76,.3);transform:translateY(-2px)}
+.btn-secondary{background:transparent;color:var(--white);border:1px solid var(--border)}
+.btn-secondary:hover{background:rgba(201,168,76,.08);border-color:var(--gold)}
+
+/* CARDS */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:32px;transition:all .3s}
+.card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 12px 40px rgba(201,168,76,.12)}
+.card-icon{font-size:2.2rem;margin-bottom:16px}
+.card h3{font-family:Georgia,serif;font-size:1.2rem;color:var(--white);margin-bottom:10px}
+.card p{font-size:.92rem;color:var(--muted);line-height:1.65}
+.card-badge{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);padding:4px 10px;border-radius:2px;margin-bottom:12px}
+
+/* GRID */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:48px}
+@media(max-width:900px){.grid-3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid-3,.grid-2{grid-template-columns:1fr}}
+
+/* PROCESS STEPS */
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;position:relative}
+.process-steps::before{content:'';position:absolute;top:28px;left:calc(12.5%);right:calc(12.5%);height:1px;background:var(--border);z-index:0}
+@media(max-width:768px){.process-steps{grid-template-columns:1fr 1fr;gap:24px}.process-steps::before{display:none}}
+@media(max-width:480px){.process-steps{grid-template-columns:1fr}}
+.step{text-align:center;padding:0 16px;position:relative;z-index:1}
+.step-num{width:56px;height:56px;border-radius:50%;background:var(--navy-dark);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:Georgia,serif;font-size:1.1rem;font-weight:700;color:var(--gold)}
+.step h3{font-size:1rem;color:var(--white);margin-bottom:8px;font-weight:700}
+.step p{font-size:.88rem;color:var(--muted);line-height:1.6}
+
+/* REQUIREMENTS BOX */
+.req-box{background:var(--navy-dark);border:1px solid var(--border);border-radius:8px;padding:40px;margin-top:48px}
+.req-box h3{font-family:Georgia,serif;font-size:1.4rem;color:var(--white);margin-bottom:8px}
+.req-box p{color:var(--muted);margin-bottom:24px;line-height:1.7}
+.req-list{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(max-width:600px){.req-list{grid-template-columns:1fr}}
+.req-list li{display:flex;align-items:flex-start;gap:10px;font-size:.92rem;color:var(--text);line-height:1.5}
+.req-list li::before{content:'✦';color:var(--gold);flex-shrink:0;margin-top:2px;font-size:.7rem}
+
+/* FORM */
+.form-box{background:var(--navy-dark);border:1px solid var(--border);border-radius:8px;padding:40px;margin-top:48px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:600px){.form-grid{grid-template-columns:1fr}}
+.form-field{display:flex;flex-direction:column;gap:8px}
+.form-field.full{grid-column:1/-1}
+.form-field label{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.form-field input,.form-field select,.form-field textarea{background:rgba(16,19,42,.8);border:1px solid var(--border);border-radius:4px;padding:13px 16px;color:var(--white);font-family:inherit;font-size:.95rem;width:100%;transition:border-color .2s;cursor:none}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{outline:none;border-color:var(--gold)}
+.form-field select option{background:var(--navy)}
+.form-field textarea{min-height:120px;resize:vertical}
+.form-field input::placeholder,.form-field textarea::placeholder{color:var(--muted)}
+.gdpr-row{display:flex;align-items:flex-start;gap:12px;margin-top:4px}
+.gdpr-row input[type=checkbox]{width:18px;height:18px;accent-color:var(--gold);cursor:none;flex-shrink:0;margin-top:2px}
+.gdpr-row label{font-size:.82rem;color:var(--muted);line-height:1.5}
+.gdpr-row label a{color:var(--gold)}
+
+/* FOOTER */
+footer{background:var(--navy-dark);border-top:1px solid var(--border);padding:clamp(40px,5vw,80px) clamp(20px,5vw,64px)}
+.footer-main{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;margin-bottom:48px}
+@media(max-width:768px){.footer-main{grid-template-columns:1fr;gap:40px}}
+.footer-logo{font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;font-weight:700;color:var(--white);letter-spacing:.08em;margin-bottom:8px}
+.footer-logo span{color:var(--gold)}
+.footer-tagline{font-size:.88rem;color:var(--muted);font-style:italic;margin-bottom:12px}
+.footer-desc{font-size:.88rem;color:var(--muted);line-height:1.6}
+.footer-col-title{font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:.88rem;color:var(--text);transition:color .2s,transform .2s;display:block}
+.footer-links a:hover{color:var(--white);transform:translateX(4px)}
+.footer-contacts{display:flex;flex-direction:column;gap:10px}
+.footer-contact-item{font-size:.88rem;color:var(--text)}
+.footer-contact-item a:hover{color:var(--gold)}
+.footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid var(--border-dim);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.78rem;color:var(--muted)}
+.footer-bottom-links{display:flex;gap:24px}
+.footer-bottom-links a{font-size:.75rem;color:var(--muted);transition:color .2s}
+
+/* COOKIE */
+#cookieBanner{display:none;position:fixed;bottom:24px;left:50%;transform:translateX(-50%);max-width:680px;width:calc(100% - 40px);background:var(--navy);border:1px solid var(--border);border-radius:10px;z-index:9990;padding:20px 24px;box-shadow:0 8px 48px rgba(0,0,0,.4)}
+.cookie-inner{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.cookie-text{font-size:.85rem;color:var(--muted);flex:1;line-height:1.55}
+.cookie-text a{color:var(--gold)}
+.cookie-actions{display:flex;gap:10px;flex-shrink:0}
+.cookie-btn{font-size:.8rem;font-weight:700;padding:8px 16px;border-radius:4px;cursor:none;border:none;transition:all .2s}
+.cookie-btn-accept{background:var(--gold);color:var(--navy-dark)}
+.cookie-btn-accept:hover{background:var(--gold-dim)}
+.cookie-btn-reject,.cookie-btn-manage{background:transparent;color:var(--muted);border:1px solid var(--border-dim)}
+.cookie-btn-reject:hover,.cookie-btn-manage:hover{color:var(--white)}
+</style>
+</head>
+<body>
+
+<div id="scrollBar"></div>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav" role="navigation" aria-label="Navigazione principale">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="K9 Services — Home" style="display:flex;flex-direction:row;align-items:center;gap:12px;">
+      <img src="images/k9-logo-real.jpg" alt="K9 Services" style="height:56px;width:auto;display:block;border-radius:4px;">
+      <div>
+        <div class="nav-logo"><span>K9</span> Services</div>
+        <div class="nav-tagline">Always Redefining Excellence</div>
+      </div>
+    </a>
+    <div class="nav-links" aria-label="Menu desktop">
+      <a href="chi-siamo.html">Chi siamo</a>
+      <a href="index.html#servizi">Servizi</a>
+      <a href="eventi.html">Eventi</a>
+      <a href="dogs-4-sale.html" class="active">Dogs 4 Sale</a>
+      <a href="corsi.html">Corsi</a>
+      <a href="elearning.html">E-Learning</a>
+      <a href="foto-video.html">Foto &amp; Video</a>
+      <a href="index.html#contatti" class="nav-cta">Contattaci</a>
+    </div>
+    <button class="nav-toggle" aria-label="Apri menu" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-mobile" id="navMobile" role="navigation" aria-label="Menu mobile">
+  <a href="chi-siamo.html" onclick="toggleNav()">Chi siamo</a>
+  <a href="index.html#servizi" onclick="toggleNav()">Servizi</a>
+  <a href="eventi.html" onclick="toggleNav()">Sicurezza eventi</a>
+  <a href="dogs-4-sale.html" onclick="toggleNav()">Dogs 4 Sale</a>
+  <a href="corsi.html" onclick="toggleNav()">Corsi &amp; Stage</a>
+  <a href="elearning.html" onclick="toggleNav()">E-Learning</a>
+  <a href="foto-video.html" onclick="toggleNav()">Foto &amp; Video</a>
+  <a href="index.html#contatti" onclick="toggleNav()">Contattaci</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero" aria-labelledby="page-h1">
+  <div class="page-hero-inner">
+    <p class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Dogs 4 Sale</p>
+    <div class="page-hero-eyebrow">Unità cinofile certificate</div>
+    <h1 id="page-h1">Cani da lavoro selezionati.<br><em>Pronti all'impiego.</em></h1>
+    <p class="page-hero-sub">Ogni unità che offriamo è stata selezionata, valutata e addestrata secondo i nostri standard operativi. Non vendiamo cani. Consegniamo strumenti professionali certificati.</p>
+    <div class="btn-group">
+      <a href="#disponibili" class="btn btn-primary">Vedi disponibilità</a>
+      <a href="#contatto-acquisto" class="btn btn-secondary">Richiedi informazioni</a>
+    </div>
+  </div>
+</section>
+
+<!-- SEZIONE: PERCHÉ K9 SERVICES -->
+<section class="section section-dark" aria-labelledby="h2-perche">
+  <div class="section-inner">
+    <span class="section-label">La differenza K9</span>
+    <h2 class="section-h2" id="h2-perche">Non tutti i cani da lavoro sono uguali.</h2>
+    <p class="section-sub">La selezione inizia prima della nascita: scegliamo linee genetiche documentate, valutiamo carattere e drive, seguiamo ogni unità dall'addestramento base al rilascio operativo.</p>
+    <div class="divider-gold"></div>
+    <div class="grid-3">
+      <div class="card reveal reveal-delay-1">
+        <div class="card-icon">🧬</div>
+        <h3>Selezione genetica documentata</h3>
+        <p>Ogni unità proviene da linee di lavoro certificate. Valutiamo pedigree, carattere e attitudine operativa prima di avviare qualsiasi percorso di addestramento.</p>
+      </div>
+      <div class="card reveal reveal-delay-2">
+        <div class="card-icon">📋</div>
+        <h3>Addestramento certificato</h3>
+        <p>Ogni cane viene addestrato secondo protocolli documentati, con registrazione delle sessioni, dei progressi e dei test superati. Consegniamo un dossier completo al momento della cessione.</p>
+      </div>
+      <div class="card reveal reveal-delay-3">
+        <div class="card-icon">🤝</div>
+        <h3>Supporto post-cessione</h3>
+        <p>Non ci fermiamo alla consegna. Offriamo supporto tecnico, sessioni di aggiornamento e consulenza operativa per garantire la massima efficacia dell'unità nel nuovo contesto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEZIONE: TIPOLOGIE DISPONIBILI -->
+<section class="section" id="disponibili" aria-labelledby="h2-disp">
+  <div class="section-inner">
+    <span class="section-label">Categorie disponibili</span>
+    <h2 class="section-h2" id="h2-disp">Ogni unità è specializzata per un compito preciso.</h2>
+    <p class="section-sub">La disponibilità varia in base al ciclo di addestramento. Contattateci per la situazione aggiornata.</p>
+    <div class="divider-gold"></div>
+    <div class="grid-2">
+      <div class="card reveal">
+        <div class="card-badge">Certificato</div>
+        <div class="card-icon">💣</div>
+        <h3>Cani Antiesplosivi (IED/EDD)</h3>
+        <p>Addestrati per il rilevamento di ordigni esplosivi improvvisati, armi e materiali pericolosi. Impiegabili in aeroporti, eventi pubblici, edifici istituzionali e bonifiche preventive. Certificazione INPS/NATO compatibile disponibile su richiesta.</p>
+      </div>
+      <div class="card reveal reveal-delay-1">
+        <div class="card-badge">Certificato</div>
+        <div class="card-icon">🚔</div>
+        <h3>Cani Patrol Dog</h3>
+        <p>Unità da pattugliamento e controllo perimetrale. Addestrate per deterrenza attiva, inseguimento, fermo e intervento su comando. Adatte a forze di polizia, istituti di vigilanza e security privata.</p>
+      </div>
+      <div class="card reveal reveal-delay-2">
+        <div class="card-badge">Certificato</div>
+        <div class="card-icon">💊</div>
+        <h3>Cani Antidroga (Narcotic Detection)</h3>
+        <p>Specializzati nel rilevamento di sostanze stupefacenti in ambienti chiusi, veicoli, bagagli e container. Percorso di addestramento multi-sostanza con test di validazione documentato.</p>
+      </div>
+      <div class="card reveal reveal-delay-3">
+        <div class="card-badge">Certificato</div>
+        <div class="card-icon">🔍</div>
+        <h3>Cani SAR (Ricerca e Soccorso)</h3>
+        <p>Unità da ricerca di persone scomparse in ambienti urbani e rurali. Addestrate per lavoro su traccia e su area. Coordinate con protocolli di protezione civile e forze dell'ordine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEZIONE: PROCESSO DI CESSIONE -->
+<section class="section section-dark" aria-labelledby="h2-processo">
+  <div class="section-inner">
+    <span class="section-label">Come funziona</span>
+    <h2 class="section-h2" id="h2-processo">Dalla richiesta alla consegna: un processo strutturato.</h2>
+    <p class="section-sub">Ogni cessione segue un iter preciso. Non facciamo vendite d'impulso. Valutiamo il contesto operativo e l'idoneità dell'acquirente prima di procedere.</p>
+    <div class="process-steps" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;position:relative">
+      <style>.process-steps{position:relative}.process-steps::before{content:'';position:absolute;top:28px;left:calc(12.5%);right:calc(12.5%);height:1px;background:var(--border);z-index:0}@media(max-width:768px){.process-steps{grid-template-columns:1fr 1fr!important;gap:32px!important}.process-steps::before{display:none}}@media(max-width:480px){.process-steps{grid-template-columns:1fr!important}}</style>
+      <div class="step reveal" style="text-align:center;padding:0 12px;position:relative;z-index:1">
+        <div class="step-num" style="width:56px;height:56px;border-radius:50%;background:var(--navy-dark);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:Georgia,serif;font-size:1.1rem;font-weight:700;color:var(--gold)">01</div>
+        <h3 style="font-size:1rem;color:var(--white);margin-bottom:8px;font-weight:700">Richiesta iniziale</h3>
+        <p style="font-size:.88rem;color:var(--muted);line-height:1.6">Compilate il modulo o contattateci. Raccogliamo le informazioni sul contesto operativo e sull'ente acquirente.</p>
+      </div>
+      <div class="step reveal reveal-delay-1" style="text-align:center;padding:0 12px;position:relative;z-index:1">
+        <div class="step-num" style="width:56px;height:56px;border-radius:50%;background:var(--navy-dark);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:Georgia,serif;font-size:1.1rem;font-weight:700;color:var(--gold)">02</div>
+        <h3 style="font-size:1rem;color:var(--white);margin-bottom:8px;font-weight:700">Verifica idoneità</h3>
+        <p style="font-size:.88rem;color:var(--muted);line-height:1.6">Valutiamo l'ente o il professionista richiedente. Le unità cinofile vengono cedute esclusivamente a soggetti qualificati e verificati.</p>
+      </div>
+      <div class="step reveal reveal-delay-2" style="text-align:center;padding:0 12px;position:relative;z-index:1">
+        <div class="step-num" style="width:56px;height:56px;border-radius:50%;background:var(--navy-dark);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:Georgia,serif;font-size:1.1rem;font-weight:700;color:var(--gold)">03</div>
+        <h3 style="font-size:1rem;color:var(--white);margin-bottom:8px;font-weight:700">Assessment operativo</h3>
+        <p style="font-size:.88rem;color:var(--muted);line-height:1.6">Incontro in sede tra il futuro conduttore e l'unità cinofila. Verifichiamo la compatibilità e adattiamo l'addestramento al contesto specifico.</p>
+      </div>
+      <div class="step reveal reveal-delay-3" style="text-align:center;padding:0 12px;position:relative;z-index:1">
+        <div class="step-num" style="width:56px;height:56px;border-radius:50%;background:var(--navy-dark);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:Georgia,serif;font-size:1.1rem;font-weight:700;color:var(--gold)">04</div>
+        <h3 style="font-size:1rem;color:var(--white);margin-bottom:8px;font-weight:700">Cessione e supporto</h3>
+        <p style="font-size:.88rem;color:var(--muted);line-height:1.6">Consegna dell'unità con dossier completo, documentazione sanitaria e libretto addestrativo. Supporto tecnico post-cessione incluso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEZIONE: REQUISITI -->
+<section class="section" aria-labelledby="h2-req">
+  <div class="section-inner">
+    <span class="section-label">Requisiti acquirenti</span>
+    <h2 class="section-h2" id="h2-req">A chi sono destinate le nostre unità.</h2>
+    <p class="section-sub">Le unità cinofile operative sono strumenti professionali. Non vengono cedute a privati senza qualificazione documentata.</p>
+    <div class="req-box reveal" style="background:var(--navy-dark);border:1px solid var(--border);border-radius:8px;padding:40px;margin-top:48px">
+      <h3 style="font-family:Georgia,serif;font-size:1.4rem;color:var(--white);margin-bottom:8px">Soggetti qualificati per l'acquisto</h3>
+      <p style="color:var(--muted);margin-bottom:24px;line-height:1.7">La cessione è riservata a enti, aziende e professionisti che possano documentare il contesto d'impiego e la competenza nella gestione di unità cinofile da lavoro.</p>
+      <ul style="list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:12px">
+        <li style="display:flex;align-items:flex-start;gap:10px;font-size:.92rem;color:var(--text);line-height:1.5"><span style="color:var(--gold);flex-shrink:0;margin-top:2px">✦</span> Forze di Polizia e Carabinieri</li>
+        <li style="display:flex;align-items:flex-start;gap:10px;font-size:.92rem;color:var(--text);line-height:1.5"><span style="color:var(--gold);flex-shrink:0;margin-top:2px">✦</span> Guardia di Finanza e Dogane</li>
+        <li style="display:flex;align-items:flex-start;gap:10px;font-size:.92rem;color:var(--text);line-height:1.5"><span style="color:var(--gold);flex-shrink:0;margin-top:2px">✦</span> Istituti di vigilanza autorizzati</li>
+        <li style="display:flex;align-items:flex-start;gap:10px;font-size:.92rem;color:var(--text);line-height:1.5"><span style="color:var(--gold);flex-shrink:0;margin-top:2px">✦</span> Agenzie di sicurezza private certificate</li>
+        <li style="display:flex;align-items:flex-start;gap:10px;font-size:.92rem;color:var(--text);line-height:1.5"><span style="color:var(--gold);flex-shrink:0;margin-top:2px">✦</span> Protezione Civile e Soccorso Alpino</li>
+        <li style="display:flex;align-items:flex-start;gap:10px;font-size:.92rem;color:var(--text);line-height:1.5"><span style="color:var(--gold);flex-shrink:0;margin-top:2px">✦</span> Professionisti con qualifica di conduttore verificata</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SEZIONE: FORM CONTATTO -->
+<section class="section section-darker" id="contatto-acquisto" aria-labelledby="h2-contatto">
+  <div class="section-inner">
+    <span class="section-label">Richiedi informazioni</span>
+    <h2 class="section-h2" id="h2-contatto">Parlaci della vostra esigenza operativa.</h2>
+    <p class="section-sub">Compilate il modulo. Vi ricontatteremo entro 24 ore per discutere la disponibilità e il percorso più adatto al vostro contesto.</p>
+    <div style="background:var(--navy-dark);border:1px solid var(--border);border-radius:8px;padding:40px;margin-top:40px" class="reveal">
+      <form id="contactFormDogs" onsubmit="handleDogForm(event)">
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="d-nome">Nome e Cognome *</label>
+            <input type="text" id="d-nome" name="nome" placeholder="Mario Rossi" required>
+          </div>
+          <div class="form-field">
+            <label for="d-ente">Ente / Azienda *</label>
+            <input type="text" id="d-ente" name="ente" placeholder="Questura di Milano" required>
+          </div>
+          <div class="form-field">
+            <label for="d-email">Email professionale *</label>
+            <input type="email" id="d-email" name="email" placeholder="m.rossi@ente.it" required>
+          </div>
+          <div class="form-field">
+            <label for="d-tel">Telefono</label>
+            <input type="tel" id="d-tel" name="tel" placeholder="+39 338 ...">
+          </div>
+          <div class="form-field">
+            <label for="d-tipo">Tipo di unità cercata *</label>
+            <select id="d-tipo" name="tipo" required>
+              <option value="" disabled selected>Seleziona categoria</option>
+              <option value="antiesplosivo">Cane Antiesplosivo (IED/EDD)</option>
+              <option value="patrol">Patrol Dog</option>
+              <option value="antidroga">Cane Antidroga</option>
+              <option value="sar">Cane SAR (Ricerca e Soccorso)</option>
+              <option value="altro">Altro / Non so ancora</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="d-tempistica">Tempistica prevista</label>
+            <select id="d-tempistica" name="tempistica">
+              <option value="" disabled selected>Seleziona tempistica</option>
+              <option value="urgente">Urgente (entro 30 giorni)</option>
+              <option value="3mesi">Entro 3 mesi</option>
+              <option value="6mesi">Entro 6 mesi</option>
+              <option value="valutazione">In fase di valutazione</option>
+            </select>
+          </div>
+          <div class="form-field full">
+            <label for="d-msg">Contesto operativo e note aggiuntive</label>
+            <textarea id="d-msg" name="messaggio" placeholder="Descrivete brevemente il contesto d'impiego, il profilo del conduttore e qualsiasi requisito specifico..."></textarea>
+          </div>
+          <div class="form-field full">
+            <div class="gdpr-row">
+              <input type="checkbox" id="d-gdpr" name="gdpr" required>
+              <label for="d-gdpr">Ho letto e accetto la <a href="privacy.html">Privacy Policy</a>. Autorizzo il trattamento dei dati personali ai sensi del GDPR 2016/679. *</label>
+            </div>
+          </div>
+          <div class="form-field full">
+            <button type="submit" class="btn btn-primary" id="dogFormBtn">Invia richiesta</button>
+          </div>
+        </div>
+      </form>
+      <div id="dogFormSuccess" style="display:none;text-align:center;padding:40px 0">
+        <div style="font-size:2.5rem;margin-bottom:16px">✦</div>
+        <h3 style="font-family:Georgia,serif;color:var(--white);font-size:1.4rem;margin-bottom:12px">Richiesta ricevuta.</h3>
+        <p style="color:var(--muted)">Vi ricontatteremo entro 24 ore al contatto fornito.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="images/k9-logo-real.jpg" alt="K9 Services" style="height:64px;width:auto;border-radius:4px;margin-bottom:12px;">
+      <div class="footer-logo"><span>K9</span> Services</div>
+      <p style="font-size:.75rem;color:var(--gold);letter-spacing:.08em;margin-bottom:4px;">K9 DETECTION</p>
+      <p class="footer-tagline">"Il loro fiuto, la nostra passione, la vostra sicurezza."</p>
+      <p class="footer-desc">Sicurezza cinofila professionale dal 1999.<br>Operativi in Italia e all'estero.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Link rapidi</div>
+      <nav class="footer-links" aria-label="Link footer">
+        <a href="chi-siamo.html">Chi siamo</a>
+        <a href="index.html#servizi">I nostri servizi</a>
+        <a href="eventi.html">Sicurezza eventi</a>
+        <a href="dogs-4-sale.html">Dogs 4 Sale</a>
+        <a href="corsi.html">Corsi &amp; Stage</a>
+        <a href="elearning.html">E-Learning</a>
+        <a href="foto-video.html">Foto &amp; Video</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contatti">Contatti</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="cookie.html">Cookie Policy</a>
+        <a href="termini.html">Termini di Servizio</a>
+      </nav>
+    </div>
+    <div>
+      <div class="footer-col-title">Contatti</div>
+      <div class="footer-contacts">
+        <div class="footer-contact-item" style="color:var(--gold);font-weight:700;">☎ <a href="tel:800628941" style="color:var(--gold);">800 62 89 41</a> (Numero Verde)</div>
+        <div class="footer-contact-item">📞 <a href="tel:+393381371226">+39.338.1371226</a> (IT)</div>
+        <div class="footer-contact-item">📞 <a href="tel:+393383530793">+39.338.3530793</a> (EN)</div>
+        <div class="footer-contact-item">✉ <a href="mailto:xplorer.academy@gmail.com">xplorer.academy@gmail.com</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 K9 Services &middot; P.IVA IT03501350130 &middot; Tutti i diritti riservati. &middot; <a href="https://mentisdigital.it" target="_blank" rel="noopener" style="color:var(--muted);text-decoration:none;">Realizzato da Mentis Digital</a></span>
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookie.html">Cookie Policy</a>
+      <a href="termini.html">Termini</a>
+    </div>
+  </div>
+</footer>
+
+<!-- COOKIE BANNER -->
+<div id="cookieBanner" role="dialog" aria-label="Gestione cookie" aria-live="polite">
+  <div class="cookie-inner">
+    <p class="cookie-text">Utilizziamo cookie tecnici essenziali. Leggi la nostra <a href="privacy.html">Privacy Policy</a> e la <a href="cookie.html">Cookie Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-btn-manage" onclick="manageCookies()">Gestisci</button>
+      <button class="cookie-btn cookie-btn-reject" onclick="dismissCookies('refused')">Rifiuta</button>
+      <button class="cookie-btn cookie-btn-accept" onclick="dismissCookies('accepted')">Accetto</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* CURSOR */
+(function(){var d=document.getElementById('cursor'),r=document.getElementById('cursor-ring');if(!d||!r)return;var mx=0,my=0,rx=0,ry=0;document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;d.style.left=mx+'px';d.style.top=my+'px'});function a(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;r.style.left=rx+'px';r.style.top=ry+'px';requestAnimationFrame(a)}a();document.querySelectorAll('a,button').forEach(function(el){el.addEventListener('mouseenter',function(){d.style.width='16px';d.style.height='16px';r.style.width='52px';r.style.height='52px';r.style.borderColor='rgba(201,168,76,.8)'});el.addEventListener('mouseleave',function(){d.style.width='10px';d.style.height='10px';r.style.width='38px';r.style.height='38px';r.style.borderColor='rgba(201,168,76,.5)'})})})();
+
+/* SCROLL BAR */
+var sb=document.getElementById('scrollBar');window.addEventListener('scroll',function(){sb.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%'},{passive:true});
+
+/* NAV */
+function toggleNav(){document.getElementById('navMobile').classList.toggle('open')}
+document.addEventListener('click',function(e){var m=document.getElementById('navMobile');if(m.classList.contains('open')&&!m.contains(e.target)&&!document.querySelector('.nav-toggle').contains(e.target))m.classList.remove('open')});
+window.addEventListener('scroll',function(){document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>60)},{passive:true});
+
+/* REVEAL */
+(function(){var els=document.querySelectorAll('.reveal');if(!els.length)return;var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.12});els.forEach(function(el){obs.observe(el)})})();
+
+/* COOKIE */
+(function(){if(!localStorage.getItem('k9_cookie_choice'))document.getElementById('cookieBanner').style.display='block'})();
+function dismissCookies(c){localStorage.setItem('k9_cookie_choice',c);var b=document.getElementById('cookieBanner');b.style.transition='opacity .35s,transform .35s';b.style.opacity='0';b.style.transform='translateY(20px)';setTimeout(function(){b.style.display='none'},380)}
+function manageCookies(){alert('Gestione preferenze cookie — funzione disponibile a breve.\n\nAl momento utilizziamo solo cookie tecnici essenziali.')}
+
+/* FORM */
+function handleDogForm(e){
+  e.preventDefault();
+  var btn=document.getElementById('dogFormBtn');
+  var gdpr=document.getElementById('d-gdpr');
+  if(!gdpr.checked){gdpr.style.outlineColor='red';return}
+  btn.disabled=true;btn.textContent='Invio in corso…';
+  var nome=document.getElementById('d-nome').value.trim();
+  var email=document.getElementById('d-email').value.trim();
+  var ente=document.getElementById('d-ente').value.trim();
+  var tipo=document.getElementById('d-tipo').value;
+  var msg=document.getElementById('d-msg').value.trim();
+  var subj=encodeURIComponent('Richiesta Dogs 4 Sale — K9 Services');
+  var body=encodeURIComponent('Nome: '+nome+'\nEnte: '+ente+'\nEmail: '+email+'\nTipo unità: '+tipo+'\n\nNote:\n'+msg);
+  window.location.href='mailto:xplorer.academy@gmail.com?subject='+subj+'&body='+body;
+  setTimeout(function(){document.getElementById('contactFormDogs').style.display='none';document.getElementById('dogFormSuccess').style.display='block'},800);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+# robots.txt — K9 Services
+# https://www.k9services.it/
+# Aggiornato: 2026-03-06
+
+# Tutti i crawler — accesso completo al sito pubblico
+User-agent: *
+Allow: /
+
+# Blocco cartelle non pubbliche (aggiungere se esistono)
+Disallow: /admin/
+Disallow: /dev/
+Disallow: /test/
+Disallow: /staging/
+Disallow: /backup/
+Disallow: /*.log$
+Disallow: /*.sql$
+
+# Crawl-delay opzionale per crawler aggressivi
+# Crawl-delay: 10
+
+# Sitemap
+Sitemap: https://www.k9services.it/sitemap.xml

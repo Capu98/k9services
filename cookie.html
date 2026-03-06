@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookie Policy — K9 Services</title>
+<meta name="description" content="Informativa sull'utilizzo dei cookie sul sito K9 Services, ai sensi del GDPR e delle Linee Guida del Garante Privacy.">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐕</text></svg>">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:       #1a1f3a;
+  --navy-dark:  #10132a;
+  --surface:    #252535;
+  --gold:       #C9A84C;
+  --gold-dim:   #a88a38;
+  --text:       #d8dde8;
+  --muted:      #8a92a6;
+  --white:      #f4f6f9;
+  --border:     rgba(201,168,76,0.18);
+  --border-dim: rgba(255,255,255,0.07);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  background: #1a1f3a;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+a { color: var(--gold); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* NAV */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  height: 72px;
+  background: rgba(16,19,42,0.97);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center;
+  padding: 0 clamp(20px, 5vw, 64px);
+}
+
+.nav-inner {
+  max-width: 1200px; margin: 0 auto; width: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.nav-brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem; font-weight: 700;
+  color: var(--white); letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.nav-brand span { color: var(--gold); }
+
+.nav-back {
+  font-size: 0.85rem; font-weight: 600; color: var(--muted);
+  transition: color 0.2s;
+}
+.nav-back:hover { color: var(--white); text-decoration: none; }
+
+/* BREADCRUMB */
+.breadcrumb {
+  max-width: 800px; margin: 0 auto;
+  padding: 92px clamp(20px, 5vw, 64px) 0;
+  font-size: 0.78rem; color: var(--muted);
+}
+
+.breadcrumb a { color: var(--muted); transition: color 0.2s; }
+.breadcrumb a:hover { color: var(--gold); }
+.breadcrumb span { color: var(--gold); }
+
+/* LEGAL CONTENT */
+.legal-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px clamp(20px, 5vw, 64px) 80px;
+}
+
+.legal-page h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700; line-height: 1.15;
+  color: var(--white); margin-bottom: 8px;
+}
+
+.legal-page h1 em {
+  font-style: normal; color: var(--gold);
+}
+
+.legal-date {
+  font-size: 0.82rem; color: var(--muted); margin-bottom: 48px;
+}
+
+.legal-page h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem; font-weight: 700;
+  margin: 40px 0 16px; color: var(--white);
+}
+
+.legal-page h3 {
+  font-size: 1rem; font-weight: 600;
+  margin: 24px 0 10px; color: var(--gold);
+}
+
+.legal-page p, .legal-page li {
+  font-size: 0.95rem; color: var(--muted);
+  line-height: 1.8; margin-bottom: 12px;
+}
+
+.legal-page ul { padding-left: 20px; margin-bottom: 16px; }
+.legal-page li { margin-bottom: 6px; }
+
+.legal-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px; margin: 24px 0;
+}
+.legal-card p:last-child { margin-bottom: 0; }
+
+.legal-highlight {
+  background: rgba(201,168,76,0.06);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 8px;
+  padding: 16px 20px; margin: 20px 0;
+  font-size: 0.9rem; color: var(--text);
+  line-height: 1.7;
+}
+
+/* COOKIE TABLE */
+.cookie-table {
+  width: 100%; border-collapse: collapse;
+  margin: 20px 0; font-size: 0.88rem;
+}
+
+.cookie-table th {
+  background: var(--surface);
+  color: var(--gold);
+  font-weight: 700; font-size: 0.72rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  text-align: left; padding: 12px 16px;
+}
+
+.cookie-table th:first-child { border-radius: 8px 0 0 0; }
+.cookie-table th:last-child { border-radius: 0 8px 0 0; }
+
+.cookie-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-dim);
+  color: var(--muted); vertical-align: top;
+}
+
+.cookie-table tr:last-child td { border-bottom: none; }
+.cookie-table tbody tr:hover { background: rgba(201,168,76,0.03); }
+
+.cookie-badge {
+  display: inline-block;
+  font-size: 0.68rem; font-weight: 700;
+  padding: 3px 10px; border-radius: 20px;
+  letter-spacing: 0.05em; text-transform: uppercase;
+}
+
+.badge-essential { background: rgba(201,168,76,0.12); color: var(--gold); }
+.badge-analytics { background: rgba(100,200,150,0.1); color: #6bc89a; }
+
+/* FOOTER */
+footer {
+  background: #080a14;
+  border-top: 1px solid rgba(201,168,76,0.12);
+}
+
+.footer-bottom {
+  max-width: 1200px; margin: 0 auto;
+  padding: 20px clamp(20px, 5vw, 64px);
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+  font-size: 0.76rem; color: #3a4050;
+}
+
+.footer-bottom a {
+  color: #4a5060; transition: color 0.2s; text-decoration: none;
+}
+.footer-bottom a:hover { color: var(--muted); }
+
+.footer-bottom-links { display: flex; gap: 20px; }
+
+/* COOKIE BANNER */
+#cookieBanner {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
+  background: rgba(8,10,24,0.98); backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -4px 40px rgba(0,0,0,0.6);
+  padding: 20px clamp(20px, 5vw, 64px); display: none;
+}
+
+.cookie-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+}
+
+.cookie-text {
+  flex: 1; min-width: 260px;
+  font-size: 0.85rem; color: var(--muted); line-height: 1.6;
+}
+
+.cookie-text a {
+  color: var(--gold); text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cookie-actions { display: flex; gap: 10px; flex-shrink: 0; flex-wrap: wrap; }
+
+.cookie-btn {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em;
+  padding: 9px 20px; border-radius: 4px; cursor: pointer;
+  border: none; transition: all 0.2s; white-space: nowrap;
+}
+
+.cookie-btn-accept { background: var(--gold); color: var(--navy-dark); }
+.cookie-btn-accept:hover { background: var(--gold-dim); box-shadow: 0 4px 16px rgba(201,168,76,0.3); }
+.cookie-btn-reject { background: transparent; color: var(--muted); border: 1px solid #2a3050; }
+.cookie-btn-reject:hover { border-color: var(--muted); color: #c8d0dc; }
+.cookie-btn-manage { background: transparent; color: #4a5068; border: 1px solid #1e2540; font-size: 0.75rem; }
+.cookie-btn-manage:hover { color: var(--muted); border-color: #2a3050; }
+
+@media (max-width: 600px) {
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .cookie-table { font-size: 0.78rem; }
+  .cookie-table th, .cookie-table td { padding: 8px 10px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html"><span>K9</span> Services</a>
+    <a class="nav-back" href="index.html">&larr; Torna al sito</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a> &rsaquo; <span>Cookie Policy</span>
+</div>
+
+<!-- CONTENT -->
+<div class="legal-page">
+
+  <h1>Cookie <em>Policy</em></h1>
+  <p class="legal-date">Ultimo aggiornamento: marzo 2026</p>
+
+  <p>Questa Cookie Policy spiega cosa sono i cookie, quali tipologie utilizziamo sul sito di K9 Services e come puoi gestirli, ai sensi del Regolamento (UE) 2016/679 (GDPR), del D.Lgs. 196/2003 e delle Linee Guida del Garante per la protezione dei dati personali del 10 giugno 2021.</p>
+
+  <h2>1. Cosa sono i cookie</h2>
+  <p>I cookie sono piccoli file di testo che i siti web salvano sul tuo dispositivo (computer, smartphone, tablet) quando li visiti. Servono a far funzionare il sito correttamente e, in alcuni casi, a raccogliere informazioni statistiche sull'utilizzo del sito.</p>
+
+  <h2>2. Cookie utilizzati da questo sito</h2>
+
+  <table class="cookie-table">
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Nome</th>
+        <th>Finalit&agrave;</th>
+        <th>Durata</th>
+        <th>Consenso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="cookie-badge badge-essential">Tecnico</span></td>
+        <td>k9_cookie_choice</td>
+        <td>Memorizza la scelta dell'utente sul banner cookie (accettato/rifiutato)</td>
+        <td>Sessione (localStorage)</td>
+        <td>Non richiesto</td>
+      </tr>
+      <tr>
+        <td><span class="cookie-badge badge-analytics">Analytics</span></td>
+        <td>Plausible Analytics</td>
+        <td>Statistiche di navigazione aggregate e anonimizzate (pagine visitate, provenienza, durata). <strong>Nessun cookie di terze parti</strong> &mdash; Plausible non utilizza cookie e non raccoglie dati personali.</td>
+        <td>Nessun cookie</td>
+        <td>Non richiesto *</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="legal-highlight">
+    <strong>* Nota su Plausible Analytics:</strong> Plausible &egrave; un servizio di analytics privacy-first che non utilizza cookie, non raccoglie dati personali e non traccia gli utenti tra sessioni o siti diversi. Per questo motivo, ai sensi delle Linee Guida del Garante del 10 giugno 2021, non richiede il consenso dell'utente.
+  </div>
+
+  <h3>2.1 Cookie tecnici (essenziali)</h3>
+  <p>Il sito utilizza un unico dato tecnico salvato nel browser (localStorage) per ricordare la tua scelta sul banner cookie. Non &egrave; un cookie in senso stretto, ma funziona in modo analogo. &Egrave; indispensabile per non mostrarti il banner ad ogni visita.</p>
+  <p>I cookie tecnici non richiedono il tuo consenso ai sensi dell'art. 122 del Codice Privacy e delle Linee Guida del Garante.</p>
+
+  <h3>2.2 Analytics (Plausible)</h3>
+  <p>Utilizziamo <strong>Plausible Analytics</strong>, un servizio di analisi web conforme al GDPR che:</p>
+  <ul>
+    <li>Non utilizza cookie di alcun tipo</li>
+    <li>Non raccoglie indirizzi IP o dati personali identificativi</li>
+    <li>Non traccia gli utenti tra sessioni diverse o tra siti diversi</li>
+    <li>Non condivide dati con terze parti</li>
+    <li>I dati sono conservati su server europei</li>
+  </ul>
+
+  <h3>2.3 Cookie di profilazione e marketing</h3>
+  <p><strong>Questo sito non utilizza cookie di profilazione o di marketing.</strong> Non utilizziamo Google Analytics, Meta Pixel, n&eacute; altri strumenti di tracciamento commerciale.</p>
+
+  <h2>3. Come gestire le preferenze</h2>
+  <p>Puoi gestire i cookie tramite le impostazioni del tuo browser:</p>
+
+  <div class="legal-card">
+    <p><strong>Google Chrome</strong><br>
+    Impostazioni &rarr; Privacy e sicurezza &rarr; Cookie e altri dati dei siti &rarr; Gestisci le eccezioni</p>
+
+    <p><strong>Mozilla Firefox</strong><br>
+    Impostazioni &rarr; Privacy e sicurezza &rarr; Cookie e dati dei siti web &rarr; Gestisci eccezioni</p>
+
+    <p><strong>Apple Safari</strong><br>
+    Preferenze &rarr; Privacy &rarr; Gestisci dati siti web</p>
+
+    <p><strong>Microsoft Edge</strong><br>
+    Impostazioni &rarr; Cookie e autorizzazioni sito &rarr; Gestisci e elimina cookie e dati dei siti</p>
+
+    <p><strong>Safari (iPhone/iPad)</strong><br>
+    Impostazioni &rarr; Safari &rarr; Blocca tutti i cookie</p>
+  </div>
+
+  <h3>3.1 Revocare il consenso al banner cookie</h3>
+  <p>Se desideri che il banner cookie venga nuovamente mostrato, puoi cancellare la voce <code>k9_cookie_choice</code> dal localStorage del browser:</p>
+  <ul>
+    <li>Apri gli Strumenti per sviluppatori (F12 o Ctrl+Shift+I)</li>
+    <li>Vai nella scheda "Application" (Chrome/Edge) o "Storage" (Firefox)</li>
+    <li>Nella sezione "Local Storage", seleziona il sito e cancella la voce <code>k9_cookie_choice</code></li>
+  </ul>
+  <p>In alternativa, cancella i dati di navigazione del sito dalle impostazioni del browser.</p>
+
+  <h2>4. Aggiornamenti</h2>
+  <p>Questa Cookie Policy pu&ograve; essere aggiornata periodicamente. Eventuali modifiche saranno pubblicate su questa pagina con indicazione della data di ultimo aggiornamento.</p>
+
+  <h2>5. Contatti</h2>
+  <p>Per domande sulla presente Cookie Policy, scrivi a: <a href="mailto:xplorer.academy@gmail.com">xplorer.academy@gmail.com</a></p>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-bottom">
+    <span>&copy; 2026 K9 Services &middot; P.IVA IT03501350130 &middot; Tutti i diritti riservati.</span>
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookie.html">Cookie Policy</a>
+      <a href="termini.html">Termini</a>
+    </div>
+  </div>
+</footer>
+
+<!-- COOKIE BANNER GDPR -->
+<div id="cookieBanner" role="dialog" aria-label="Gestione cookie" aria-live="polite">
+  <div class="cookie-inner">
+    <p class="cookie-text">
+      Utilizziamo cookie tecnici essenziali per il corretto funzionamento del sito. Nessun cookie di profilazione o tracciamento commerciale.
+      Leggi la nostra <a href="privacy.html">Privacy Policy</a> e la <a href="cookie.html">Cookie Policy</a>.
+    </p>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-btn-manage" onclick="manageCookies()">Gestisci</button>
+      <button class="cookie-btn cookie-btn-reject" onclick="dismissCookies('refused')">Rifiuta tutto</button>
+      <button class="cookie-btn cookie-btn-accept" onclick="dismissCookies('accepted')">Accetto</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  if (!localStorage.getItem('k9_cookie_choice')) {
+    document.getElementById('cookieBanner').style.display = 'block';
+  }
+})();
+
+function dismissCookies(choice) {
+  localStorage.setItem('k9_cookie_choice', choice);
+  var b = document.getElementById('cookieBanner');
+  b.style.transition = 'opacity 0.35s, transform 0.35s';
+  b.style.opacity = '0';
+  b.style.transform = 'translateY(20px)';
+  setTimeout(function() { b.style.display = 'none'; }, 380);
+}
+
+function manageCookies() {
+  alert('Gestione preferenze cookie\n\nAl momento utilizziamo solo cookie tecnici essenziali, non disattivabili.');
+}
+</script>
+
+</body>
+</html>

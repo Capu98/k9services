@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — K9 Services</title>
+<meta name="description" content="Informativa sulla privacy di K9 Services ai sensi del Regolamento UE 2016/679 (GDPR). Come trattiamo i tuoi dati personali.">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐕</text></svg>">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:       #1a1f3a;
+  --navy-dark:  #10132a;
+  --surface:    #252535;
+  --gold:       #C9A84C;
+  --gold-dim:   #a88a38;
+  --text:       #d8dde8;
+  --muted:      #8a92a6;
+  --white:      #f4f6f9;
+  --border:     rgba(201,168,76,0.18);
+  --border-dim: rgba(255,255,255,0.07);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  background: #1a1f3a;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+a { color: var(--gold); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* NAV */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  height: 72px;
+  background: rgba(16,19,42,0.97);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center;
+  padding: 0 clamp(20px, 5vw, 64px);
+}
+
+.nav-inner {
+  max-width: 1200px; margin: 0 auto; width: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.nav-brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem; font-weight: 700;
+  color: var(--white); letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.nav-brand span { color: var(--gold); }
+
+.nav-back {
+  font-size: 0.85rem; font-weight: 600; color: var(--muted);
+  transition: color 0.2s;
+}
+.nav-back:hover { color: var(--white); text-decoration: none; }
+
+/* BREADCRUMB */
+.breadcrumb {
+  max-width: 800px; margin: 0 auto;
+  padding: 92px clamp(20px, 5vw, 64px) 0;
+  font-size: 0.78rem; color: var(--muted);
+}
+
+.breadcrumb a { color: var(--muted); transition: color 0.2s; }
+.breadcrumb a:hover { color: var(--gold); }
+.breadcrumb span { color: var(--gold); }
+
+/* LEGAL CONTENT */
+.legal-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px clamp(20px, 5vw, 64px) 80px;
+}
+
+.legal-page h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700; line-height: 1.15;
+  color: var(--white); margin-bottom: 8px;
+}
+
+.legal-page h1 em {
+  font-style: normal; color: var(--gold);
+}
+
+.legal-date {
+  font-size: 0.82rem; color: var(--muted); margin-bottom: 48px;
+}
+
+.legal-page h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem; font-weight: 700;
+  margin: 40px 0 16px; color: var(--white);
+}
+
+.legal-page h3 {
+  font-size: 1rem; font-weight: 600;
+  margin: 24px 0 10px; color: var(--gold);
+}
+
+.legal-page p, .legal-page li {
+  font-size: 0.95rem; color: var(--muted);
+  line-height: 1.8; margin-bottom: 12px;
+}
+
+.legal-page ul { padding-left: 20px; margin-bottom: 16px; }
+.legal-page li { margin-bottom: 6px; }
+
+.legal-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px; margin: 24px 0;
+}
+.legal-card p:last-child { margin-bottom: 0; }
+
+.legal-highlight {
+  background: rgba(201,168,76,0.06);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 8px;
+  padding: 16px 20px; margin: 20px 0;
+  font-size: 0.9rem; color: var(--text);
+  line-height: 1.7;
+}
+
+/* FOOTER */
+footer {
+  background: #080a14;
+  border-top: 1px solid rgba(201,168,76,0.12);
+}
+
+.footer-bottom {
+  max-width: 1200px; margin: 0 auto;
+  padding: 20px clamp(20px, 5vw, 64px);
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+  font-size: 0.76rem; color: #3a4050;
+}
+
+.footer-bottom a {
+  color: #4a5060; transition: color 0.2s; text-decoration: none;
+}
+.footer-bottom a:hover { color: var(--muted); }
+
+.footer-bottom-links { display: flex; gap: 20px; }
+
+/* COOKIE BANNER */
+#cookieBanner {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
+  background: rgba(8,10,24,0.98); backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -4px 40px rgba(0,0,0,0.6);
+  padding: 20px clamp(20px, 5vw, 64px); display: none;
+}
+
+.cookie-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+}
+
+.cookie-text {
+  flex: 1; min-width: 260px;
+  font-size: 0.85rem; color: var(--muted); line-height: 1.6;
+}
+
+.cookie-text a {
+  color: var(--gold); text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cookie-actions { display: flex; gap: 10px; flex-shrink: 0; flex-wrap: wrap; }
+
+.cookie-btn {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em;
+  padding: 9px 20px; border-radius: 4px; cursor: pointer;
+  border: none; transition: all 0.2s; white-space: nowrap;
+}
+
+.cookie-btn-accept { background: var(--gold); color: var(--navy-dark); }
+.cookie-btn-accept:hover { background: var(--gold-dim); box-shadow: 0 4px 16px rgba(201,168,76,0.3); }
+.cookie-btn-reject { background: transparent; color: var(--muted); border: 1px solid #2a3050; }
+.cookie-btn-reject:hover { border-color: var(--muted); color: #c8d0dc; }
+.cookie-btn-manage { background: transparent; color: #4a5068; border: 1px solid #1e2540; font-size: 0.75rem; }
+.cookie-btn-manage:hover { color: var(--muted); border-color: #2a3050; }
+
+@media (max-width: 600px) {
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html"><span>K9</span> Services</a>
+    <a class="nav-back" href="index.html">&larr; Torna al sito</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a> &rsaquo; <span>Privacy Policy</span>
+</div>
+
+<!-- CONTENT -->
+<div class="legal-page">
+
+  <h1>Privacy <em>Policy</em></h1>
+  <p class="legal-date">Ultimo aggiornamento: marzo 2026</p>
+
+  <p>Informativa sul trattamento dei dati personali ai sensi degli artt. 13 e 14 del Regolamento (UE) 2016/679 (GDPR) e del D.Lgs. 196/2003 (Codice Privacy).</p>
+
+  <h2>1. Titolare del trattamento</h2>
+  <div class="legal-card">
+    <p><strong>K9 Services</strong></p>
+    <p>P.IVA: IT03501350130</p>
+    <p>Email: <a href="mailto:xplorer.academy@gmail.com">xplorer.academy@gmail.com</a></p>
+    <p>Telefono: <a href="tel:+393381371226">+39.338.1371226</a></p>
+  </div>
+  <p>Per qualsiasi richiesta relativa al trattamento dei tuoi dati personali, puoi contattarci all'indirizzo email indicato sopra.</p>
+
+  <h2>2. Dati personali raccolti</h2>
+  <p>Raccogliamo i seguenti dati personali quando compili il form di contatto presente sul nostro sito:</p>
+  <ul>
+    <li><strong>Nome e cognome</strong></li>
+    <li><strong>Indirizzo email</strong></li>
+    <li><strong>Numero di telefono</strong> (facoltativo)</li>
+    <li><strong>Messaggio</strong> &mdash; il testo della tua richiesta</li>
+  </ul>
+  <div class="legal-highlight">
+    Non raccogliamo dati sensibili (categorie particolari di dati ai sensi dell'art. 9 GDPR). Non raccogliamo dati di navigazione per finalit&agrave; di profilazione.
+  </div>
+
+  <h2>3. Finalit&agrave; del trattamento</h2>
+  <p>I tuoi dati personali sono trattati esclusivamente per le seguenti finalit&agrave;:</p>
+  <ul>
+    <li><strong>Risposta alle richieste di contatto</strong> &mdash; gestione della tua richiesta commerciale o informativa inviata tramite il form di contatto del sito</li>
+    <li><strong>Comunicazioni di servizio</strong> &mdash; eventuale invio di informazioni relative ai servizi richiesti, preventivi e follow-up</li>
+  </ul>
+  <p>Non utilizziamo i tuoi dati per finalit&agrave; di marketing diretto, profilazione o cessione a terzi.</p>
+
+  <h2>4. Base giuridica del trattamento</h2>
+  <ul>
+    <li><strong>Esecuzione di misure precontrattuali</strong> &mdash; il trattamento &egrave; necessario per rispondere alla tua richiesta e per l'eventuale instaurazione di un rapporto contrattuale (art. 6, par. 1, lett. b, GDPR)</li>
+    <li><strong>Consenso</strong> &mdash; per l'invio di eventuali comunicazioni informative successive alla prima risposta (art. 6, par. 1, lett. a, GDPR). Il consenso pu&ograve; essere revocato in qualsiasi momento</li>
+  </ul>
+
+  <h2>5. Periodo di conservazione</h2>
+  <p>I dati personali raccolti tramite il form di contatto sono conservati per un periodo massimo di <strong>12 (dodici) mesi</strong> dalla data di raccolta.</p>
+  <p>Trascorso tale termine, i dati saranno cancellati o anonimizzati in modo irreversibile, salvo che non sia intervenuto un rapporto contrattuale che ne giustifichi una conservazione pi&ugrave; lunga ai sensi di legge.</p>
+
+  <h2>6. Destinatari dei dati</h2>
+  <p>I tuoi dati personali <strong>non vengono ceduti o venduti a terze parti</strong>.</p>
+  <p>Possono essere comunicati esclusivamente a:</p>
+  <ul>
+    <li><strong>Provider di hosting</strong> &mdash; per l'infrastruttura tecnica del sito web, esclusivamente nella misura necessaria al funzionamento del servizio</li>
+  </ul>
+  <p>Non trasferiamo dati al di fuori dell'Unione Europea.</p>
+
+  <h2>7. Diritti dell'interessato</h2>
+  <p>In qualit&agrave; di interessato, hai il diritto di (artt. 15-22 GDPR):</p>
+  <ul>
+    <li><strong>Accesso</strong> &mdash; ottenere conferma dell'esistenza dei tuoi dati e riceverne copia (art. 15)</li>
+    <li><strong>Rettifica</strong> &mdash; correggere dati inesatti o incompleti (art. 16)</li>
+    <li><strong>Cancellazione</strong> &mdash; ottenere la cancellazione dei tuoi dati, nei limiti previsti dalla legge (art. 17)</li>
+    <li><strong>Limitazione</strong> &mdash; richiedere la limitazione del trattamento (art. 18)</li>
+    <li><strong>Portabilit&agrave;</strong> &mdash; ricevere i tuoi dati in formato strutturato e leggibile da dispositivo automatico (art. 20)</li>
+    <li><strong>Opposizione</strong> &mdash; opporti al trattamento in qualsiasi momento (art. 21)</li>
+    <li><strong>Revoca del consenso</strong> &mdash; revocare il consenso prestato in qualsiasi momento, senza pregiudicare la liceit&agrave; del trattamento basato sul consenso prima della revoca</li>
+  </ul>
+
+  <h3>Come esercitare i tuoi diritti</h3>
+  <p>Per esercitare i tuoi diritti, scrivi a: <a href="mailto:xplorer.academy@gmail.com">xplorer.academy@gmail.com</a></p>
+  <p>Risponderemo entro <strong>30 giorni</strong> dalla ricezione della richiesta, come previsto dall'art. 12 GDPR.</p>
+
+  <h3>Reclamo al Garante</h3>
+  <p>Hai inoltre il diritto di proporre reclamo al <strong>Garante per la protezione dei dati personali</strong> (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">www.garanteprivacy.it</a>) qualora ritenga che il trattamento dei tuoi dati violi il GDPR.</p>
+
+  <h2>8. Cookie</h2>
+  <p>Per informazioni sui cookie utilizzati dal nostro sito, consulta la nostra <a href="cookie.html">Cookie Policy</a>.</p>
+
+  <h2>9. Modifiche alla presente informativa</h2>
+  <p>Ci riserviamo il diritto di aggiornare questa informativa. Eventuali modifiche saranno pubblicate su questa pagina con indicazione della data di ultimo aggiornamento.</p>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-bottom">
+    <span>&copy; 2026 K9 Services &middot; P.IVA IT03501350130 &middot; Tutti i diritti riservati.</span>
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookie.html">Cookie Policy</a>
+      <a href="termini.html">Termini</a>
+    </div>
+  </div>
+</footer>
+
+<!-- COOKIE BANNER GDPR -->
+<div id="cookieBanner" role="dialog" aria-label="Gestione cookie" aria-live="polite">
+  <div class="cookie-inner">
+    <p class="cookie-text">
+      Utilizziamo cookie tecnici essenziali per il corretto funzionamento del sito. Nessun cookie di profilazione o tracciamento commerciale.
+      Leggi la nostra <a href="privacy.html">Privacy Policy</a> e la <a href="cookie.html">Cookie Policy</a>.
+    </p>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-btn-manage" onclick="manageCookies()">Gestisci</button>
+      <button class="cookie-btn cookie-btn-reject" onclick="dismissCookies('refused')">Rifiuta tutto</button>
+      <button class="cookie-btn cookie-btn-accept" onclick="dismissCookies('accepted')">Accetto</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  if (!localStorage.getItem('k9_cookie_choice')) {
+    document.getElementById('cookieBanner').style.display = 'block';
+  }
+})();
+
+function dismissCookies(choice) {
+  localStorage.setItem('k9_cookie_choice', choice);
+  var b = document.getElementById('cookieBanner');
+  b.style.transition = 'opacity 0.35s, transform 0.35s';
+  b.style.opacity = '0';
+  b.style.transform = 'translateY(20px)';
+  setTimeout(function() { b.style.display = 'none'; }, 380);
+}
+
+function manageCookies() {
+  alert('Gestione preferenze cookie\n\nAl momento utilizziamo solo cookie tecnici essenziali, non disattivabili.');
+}
+</script>
+
+</body>
+</html>

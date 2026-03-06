@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Termini di Servizio — K9 Services</title>
+<meta name="description" content="Termini e condizioni di utilizzo del sito web K9 Services. Proprietà intellettuale, limitazioni e legge applicabile.">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐕</text></svg>">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:       #1a1f3a;
+  --navy-dark:  #10132a;
+  --surface:    #252535;
+  --gold:       #C9A84C;
+  --gold-dim:   #a88a38;
+  --text:       #d8dde8;
+  --muted:      #8a92a6;
+  --white:      #f4f6f9;
+  --border:     rgba(201,168,76,0.18);
+  --border-dim: rgba(255,255,255,0.07);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  background: #1a1f3a;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+a { color: var(--gold); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* NAV */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  height: 72px;
+  background: rgba(16,19,42,0.97);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center;
+  padding: 0 clamp(20px, 5vw, 64px);
+}
+
+.nav-inner {
+  max-width: 1200px; margin: 0 auto; width: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.nav-brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem; font-weight: 700;
+  color: var(--white); letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.nav-brand span { color: var(--gold); }
+
+.nav-back {
+  font-size: 0.85rem; font-weight: 600; color: var(--muted);
+  transition: color 0.2s;
+}
+.nav-back:hover { color: var(--white); text-decoration: none; }
+
+/* BREADCRUMB */
+.breadcrumb {
+  max-width: 800px; margin: 0 auto;
+  padding: 92px clamp(20px, 5vw, 64px) 0;
+  font-size: 0.78rem; color: var(--muted);
+}
+
+.breadcrumb a { color: var(--muted); transition: color 0.2s; }
+.breadcrumb a:hover { color: var(--gold); }
+.breadcrumb span { color: var(--gold); }
+
+/* LEGAL CONTENT */
+.legal-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px clamp(20px, 5vw, 64px) 80px;
+}
+
+.legal-page h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700; line-height: 1.15;
+  color: var(--white); margin-bottom: 8px;
+}
+
+.legal-page h1 em {
+  font-style: normal; color: var(--gold);
+}
+
+.legal-date {
+  font-size: 0.82rem; color: var(--muted); margin-bottom: 48px;
+}
+
+.legal-page h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem; font-weight: 700;
+  margin: 40px 0 16px; color: var(--white);
+}
+
+.legal-page h3 {
+  font-size: 1rem; font-weight: 600;
+  margin: 24px 0 10px; color: var(--gold);
+}
+
+.legal-page p, .legal-page li {
+  font-size: 0.95rem; color: var(--muted);
+  line-height: 1.8; margin-bottom: 12px;
+}
+
+.legal-page ul { padding-left: 20px; margin-bottom: 16px; }
+.legal-page li { margin-bottom: 6px; }
+
+.legal-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px; margin: 24px 0;
+}
+.legal-card p:last-child { margin-bottom: 0; }
+
+.legal-highlight {
+  background: rgba(201,168,76,0.06);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 8px;
+  padding: 16px 20px; margin: 20px 0;
+  font-size: 0.9rem; color: var(--text);
+  line-height: 1.7;
+}
+
+/* FOOTER */
+footer {
+  background: #080a14;
+  border-top: 1px solid rgba(201,168,76,0.12);
+}
+
+.footer-bottom {
+  max-width: 1200px; margin: 0 auto;
+  padding: 20px clamp(20px, 5vw, 64px);
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+  font-size: 0.76rem; color: #3a4050;
+}
+
+.footer-bottom a {
+  color: #4a5060; transition: color 0.2s; text-decoration: none;
+}
+.footer-bottom a:hover { color: var(--muted); }
+
+.footer-bottom-links { display: flex; gap: 20px; }
+
+/* COOKIE BANNER */
+#cookieBanner {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
+  background: rgba(8,10,24,0.98); backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -4px 40px rgba(0,0,0,0.6);
+  padding: 20px clamp(20px, 5vw, 64px); display: none;
+}
+
+.cookie-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+}
+
+.cookie-text {
+  flex: 1; min-width: 260px;
+  font-size: 0.85rem; color: var(--muted); line-height: 1.6;
+}
+
+.cookie-text a {
+  color: var(--gold); text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cookie-actions { display: flex; gap: 10px; flex-shrink: 0; flex-wrap: wrap; }
+
+.cookie-btn {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em;
+  padding: 9px 20px; border-radius: 4px; cursor: pointer;
+  border: none; transition: all 0.2s; white-space: nowrap;
+}
+
+.cookie-btn-accept { background: var(--gold); color: var(--navy-dark); }
+.cookie-btn-accept:hover { background: var(--gold-dim); box-shadow: 0 4px 16px rgba(201,168,76,0.3); }
+.cookie-btn-reject { background: transparent; color: var(--muted); border: 1px solid #2a3050; }
+.cookie-btn-reject:hover { border-color: var(--muted); color: #c8d0dc; }
+.cookie-btn-manage { background: transparent; color: #4a5068; border: 1px solid #1e2540; font-size: 0.75rem; }
+.cookie-btn-manage:hover { color: var(--muted); border-color: #2a3050; }
+
+@media (max-width: 600px) {
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html"><span>K9</span> Services</a>
+    <a class="nav-back" href="index.html">&larr; Torna al sito</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a> &rsaquo; <span>Termini di Servizio</span>
+</div>
+
+<!-- CONTENT -->
+<div class="legal-page">
+
+  <h1>Termini di <em>Servizio</em></h1>
+  <p class="legal-date">Ultimo aggiornamento: marzo 2026</p>
+
+  <p>I presenti Termini di Servizio (di seguito "Termini") regolano l'utilizzo del sito web di <strong>K9 Services</strong> (P.IVA IT03501350130). Accedendo al sito, l'utente accetta integralmente i presenti Termini.</p>
+
+  <h2>1. Utilizzo del sito</h2>
+  <p>Il sito web di K9 Services ha finalit&agrave; esclusivamente <strong>informativa e di presentazione</strong> dei servizi offerti. Non &egrave; possibile effettuare acquisti online tramite il sito.</p>
+  <p>L'utente si impegna a:</p>
+  <ul>
+    <li>Utilizzare il sito in conformit&agrave; alla legge e ai presenti Termini</li>
+    <li>Non tentare di accedere ad aree riservate o sistemi non autorizzati</li>
+    <li>Non utilizzare il sito per finalit&agrave; illecite, fraudolente o lesive dei diritti di terzi</li>
+    <li>Non riprodurre, distribuire o modificare i contenuti senza autorizzazione scritta</li>
+  </ul>
+
+  <h2>2. Propriet&agrave; intellettuale</h2>
+  <div class="legal-highlight">
+    Tutti i contenuti presenti sul sito &mdash; inclusi testi, immagini, loghi, grafica, layout, video e qualsiasi altro materiale &mdash; sono di <strong>propriet&agrave; esclusiva di K9 Services</strong> e sono protetti dalle leggi italiane e internazionali sul diritto d'autore e sulla propriet&agrave; intellettuale (L. 633/1941 e ss.mm.ii.).
+  </div>
+  <p>&Egrave; vietata qualsiasi forma di riproduzione, distribuzione, comunicazione al pubblico o modifica dei contenuti senza il preventivo consenso scritto di K9 Services.</p>
+
+  <h2>3. Descrizione dei servizi</h2>
+  <p>Le schede descrittive dei servizi presenti sul sito hanno <strong>valore puramente informativo e illustrativo</strong>. Non costituiscono offerta al pubblico n&eacute; proposta contrattuale vincolante ai sensi dell'art. 1336 c.c.</p>
+  <p>Le condizioni specifiche di ogni incarico (modalit&agrave;, tempi, costi) vengono definite di volta in volta in sede di preventivo e/o contratto individuale tra le parti.</p>
+
+  <h2>4. Limitazione di responsabilit&agrave;</h2>
+  <ul>
+    <li>K9 Services si impegna a mantenere il sito web operativo e aggiornato, ma <strong>non garantisce</strong> la disponibilit&agrave; continua e ininterrotta del sito</li>
+    <li>K9 Services <strong>non &egrave; responsabile</strong> per eventuali danni diretti, indiretti, incidentali o consequenziali derivanti dall'utilizzo o dall'impossibilit&agrave; di utilizzo del sito</li>
+    <li>Le informazioni presenti sul sito sono fornite "cos&igrave; come sono" e possono essere soggette a aggiornamenti senza preavviso</li>
+    <li>K9 Services non &egrave; responsabile per i contenuti di siti web di terze parti eventualmente collegati tramite link presenti sul sito</li>
+  </ul>
+
+  <h2>5. Link esterni</h2>
+  <p>Il sito pu&ograve; contenere link a siti web di terze parti. Tali link sono forniti esclusivamente per comodit&agrave; dell'utente. K9 Services non ha alcun controllo sul contenuto di tali siti e non si assume alcuna responsabilit&agrave; per i contenuti, le privacy policy o le pratiche di siti web di terzi.</p>
+
+  <h2>6. Modifica dei Termini</h2>
+  <p>K9 Services si riserva il diritto di modificare i presenti Termini in qualsiasi momento. Le modifiche saranno pubblicate su questa pagina con indicazione della data di ultimo aggiornamento.</p>
+  <p>La prosecuzione nell'uso del sito dopo la pubblicazione delle modifiche costituisce accettazione dei Termini aggiornati.</p>
+
+  <h2>7. Legge applicabile e foro competente</h2>
+  <p>I presenti Termini sono regolati dalla <strong>legge italiana</strong>.</p>
+  <p>Per qualsiasi controversia derivante dall'interpretazione o dall'esecuzione dei presenti Termini, &egrave; competente in via esclusiva il <strong>Foro di Milano</strong>, salvo il foro inderogabile del consumatore ai sensi dell'art. 66-bis del Codice del Consumo (D.lgs. 206/2005), ove applicabile.</p>
+
+  <h2>8. Contatti</h2>
+  <div class="legal-card">
+    <p><strong>K9 Services</strong></p>
+    <p>P.IVA: IT03501350130</p>
+    <p>Email: <a href="mailto:xplorer.academy@gmail.com">xplorer.academy@gmail.com</a></p>
+    <p>Telefono: <a href="tel:+393381371226">+39.338.1371226</a></p>
+  </div>
+  <p>Per qualsiasi domanda sui presenti Termini o per questioni legali relative al sito, scrivici all'indirizzo indicato sopra.</p>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-bottom">
+    <span>&copy; 2026 K9 Services &middot; P.IVA IT03501350130 &middot; Tutti i diritti riservati.</span>
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookie.html">Cookie Policy</a>
+      <a href="termini.html">Termini</a>
+    </div>
+  </div>
+</footer>
+
+<!-- COOKIE BANNER GDPR -->
+<div id="cookieBanner" role="dialog" aria-label="Gestione cookie" aria-live="polite">
+  <div class="cookie-inner">
+    <p class="cookie-text">
+      Utilizziamo cookie tecnici essenziali per il corretto funzionamento del sito. Nessun cookie di profilazione o tracciamento commerciale.
+      Leggi la nostra <a href="privacy.html">Privacy Policy</a> e la <a href="cookie.html">Cookie Policy</a>.
+    </p>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-btn-manage" onclick="manageCookies()">Gestisci</button>
+      <button class="cookie-btn cookie-btn-reject" onclick="dismissCookies('refused')">Rifiuta tutto</button>
+      <button class="cookie-btn cookie-btn-accept" onclick="dismissCookies('accepted')">Accetto</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  if (!localStorage.getItem('k9_cookie_choice')) {
+    document.getElementById('cookieBanner').style.display = 'block';
+  }
+})();
+
+function dismissCookies(choice) {
+  localStorage.setItem('k9_cookie_choice', choice);
+  var b = document.getElementById('cookieBanner');
+  b.style.transition = 'opacity 0.35s, transform 0.35s';
+  b.style.opacity = '0';
+  b.style.transform = 'translateY(20px)';
+  setTimeout(function() { b.style.display = 'none'; }, 380);
+}
+
+function manageCookies() {
+  alert('Gestione preferenze cookie\n\nAl momento utilizziamo solo cookie tecnici essenziali, non disattivabili.');
+}
+</script>
+
+</body>
+</html>
